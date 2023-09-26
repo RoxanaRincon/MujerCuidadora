@@ -28,13 +28,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link" href="#">Manzanas del cuidado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Programas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../vista/inscripciones.php">Registro de Municipios</a>
+                            <a class="nav-link" href="../vista/municipios.php">Municipios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contacto</a>
@@ -60,7 +57,7 @@
                                     <a href="#" class="nav_link"> 
                                         <i class='bx bx-bar-chart-alt-2 nav_icon'></i> 
                                         <span class="nav_name">Reportes</span> </a> 
-                                            <a href="#" class="nav_link"> 
+                                            <a href="../vista/municipios.php" class="nav_link"> 
                                             <i class='bx bx-map nav_icon'></i>
                                             <span class="nav_name">Ubicación</span>
                                         </a>
@@ -71,15 +68,8 @@
     </div>
     <!-- Contenido principal -->
     <div class="main-content">
-          
         <div class="container">
            
-        <div id="map"></div>
-
-        <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-      defer
-    ></script>
 
         </div>
     </div>

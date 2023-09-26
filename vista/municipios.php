@@ -1,59 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro y Listado de Municipios</title>
-    <!-- Agregar el enlace a Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>SENA - Control de Competencias</title>
+    <!-- Enlaces CDN de Bootstrap, jQuery y Boxicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <script src="js/mapa.js"></script>
+    
 </head>
-<body>
-    <div class="container mt-5">
-        <h1 class="text-center">Registro y Listado de Municipios</h1>
-
-        <!-- Formulario para agregar un nuevo municipio -->
-        <div class="row mt-4">
-            <div class="col-md-6 offset-md-3">
-                <h2>Agregar Municipio</h2>
-                <form id="formularioAgregarMunicipio">
-                    <div class="form-group">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" class="form-control" id="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="localidad">Localidad:</label>
-                        <input type="text" class="form-control" id="localidad" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="direccion">Dirección:</label>
-                        <input type="text" class="form-control" id="direccion" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Agregar Municipio</button>
-                </form>
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+    
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+            <a class="navbar-brand" href="#">
+            <img src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/09/logo-manz-AntNar_.svg" alt="Manzanas del Cuidado" width="100" height="100">          
+        </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Manzanas del cuidado</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../vista/municipios.php">Municipios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-
-        <!-- Botón para listar municipios -->
-        <div class="row mt-4">
-            <div class="col-md-6 offset-md-3">
-                <button id="listarMunicipiosBtn" class="btn btn-success btn-block">Listar Municipios</button>
-            </div>
-        </div>
-
-        <!-- Lista de municipios -->
-        <div class="row mt-4">
-            <div class="col-md-6 offset-md-3">
-                <h2>Listado de Municipios</h2>
-                <ul id="listaMunicipios" class="list-group"></ul>
-            </div>
-        </div>
+        </nav>
+        <div class="header_img"> <img src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/06/logo-simbolo-mc_.svg" alt=""> </div>
+   
+   
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
+                <div class="nav_list"> 
+                    <a href="#" class="nav_link active"> 
+                        <i class='bx bx-grid-alt nav_icon'></i>
+                         <span class="nav_name">Parametricas</span> </a> 
+                         <a href="#" class="nav_link"> 
+                            <i class='bx bx-user nav_icon'></i>
+                          <span class="nav_name">Usuarios</span> </a> 
+                                    <a href="#" class="nav_link"> 
+                                        <i class='bx bx-bar-chart-alt-2 nav_icon'></i> 
+                                        <span class="nav_name">Reportes</span> </a> 
+                                            <a href="../vista/municipios.php" class="nav_link"> 
+                                            <i class='bx bx-map nav_icon'></i>
+                                            <span class="nav_name">Ubicación</span>
+                                        </a>
+                                    </div>
+            </div> <a href="#" class="nav_link"> 
+                <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+        </nav>
     </div>
+    <!-- Contenido principal -->
+    <div class="main-content">
+          <div class="container mt-5">
+       <!-- Formulario para agregar un nuevo municipio -->
+            <div class="row mt-4">
+                <div class="col-md-6 offset-md-3">
+                    <h2>Agregar Municipio</h2>
+                    <form id="formularioAgregarMunicipio">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="localidad">Localidad:</label>
+                            <input type="text" class="form-control" id="localidad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Dirección:</label>
+                            <input type="text" class="form-control" id="direccion" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Agregar Municipio</button>
+                    </form>
+                </div>
+            </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Agregar tu script de JavaScript para manejar la lógica -->
-    <script src="js/municipios.js"></script>
+</div>
+
+</div>
+
+
+    
 </body>
 </html>
