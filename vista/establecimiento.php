@@ -73,13 +73,13 @@
                     <a href="#" class="nav_link active"> 
                         <i class='bx bx-grid-alt nav_icon'></i>
                          <span class="nav_name">Parametricas</span> </a> 
-                         <a href="#" class="nav_link"> 
+                         <a href="../vista/usuario.php" class="nav_link"> 
                             <i class='bx bx-user nav_icon'></i>
                           <span class="nav_name">Usuarios</span> </a> 
                                     <a href="../vista/usuario.php" class="nav_link"> 
                                         <i class='bx bx-bar-chart-alt-2 nav_icon'></i> 
                                         <span class="nav_name">Reportes</span> </a> 
-                                            <a href="../vista/municipios.php" class="nav_link"> 
+                                            <a href="../vista/manzanas.php" class="nav_link"> 
                                             <i class='bx bx-map nav_icon'></i>
                                             <span class="nav_name">Ubicación</span>
                                         </a>
