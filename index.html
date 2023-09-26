@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='vista/css/main.css'> -->
-    <script src='view/js/main.js'></script>
+    <script src='vista/js/main.js'></script>
 </head>
 <body>
 
@@ -42,7 +42,7 @@
 
                 <!-- ----------------------------------------------- menu -------------------------- -->
                 <li style="padding-top: 25px; letter-spacing: 0.05em; padding-left: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" id="home" href="#">Home</a>
                 </li>
                 <li style="padding-top: 25px; letter-spacing: 0.05em; padding-left: 20px; font-family: Georgia, 'Times New Roman', Times, serif;" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -61,7 +61,7 @@
                 </ul>
                 <form class="d-flex">
                 <input style="height: 40px; width: 200px;" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button style="border: none; padding-right: 20px;" class="btn" type="submit"><i class="bi bi-question-circle"></i></button>
+                <button style="border: none; padding-right: 20px;" id="btnPregunta" class="btn" type="button"><i class="bi bi-question-circle"></i></button>
                 <div style="padding-left: 15px;">
                     <button style="width: 150px; font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing: 0.05em; background: #7D3B88; border-radius: 7px; color: white; " class="btn" type="submit">Login In</button>
                 </div>
@@ -70,8 +70,9 @@
         </div>
     </nav>
 
+    <img src="./vista/imagenes/linea.png" alt="">
     <div id="contenidoPricipal">
-        <img src="./vista/imagenes/linea.png" alt="">
+        
     <br><br><br>
     <!-- --------------------------------------- descripcion -------------------------------- -->
     <div class="row">
@@ -129,18 +130,46 @@
     </div>
 
     <br>
-    <div id="quienesSomos">
+    <br>
+    <div id="quienesSomos" style="display: none;">
+        <center>
+            <h1 style="font-size: 40px; font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing: 0.05em; ">¿QUIENES SOMOS?</h1>
+        </center>
         <div style="padding-left: 30px;" class="row">
             <div class="col-md-6">
                 <center>
-                    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing: 0.05em; ">¿Quienes somos?</h1>
-                    <p style="font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing: 0.05em;">Bienvenidos a las Manzanas del Cuidado, donde las cuidadoras encuentran 
+                    <p style="padding-top: 70px; font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing: 0.05em;">Bienvenidos a las Manzanas del Cuidado, donde las cuidadoras encuentran 
                         tiempo y servicios gratuitos para estudiar, emprender, descansar, 
                         recibir orientación y más. Somos una comunidad comprometida en apoyar 
                         a las mujeres y sus familias en su búsqueda de equilibrio y 
                         empoderamiento en la ciudad. ¡Únete a nosotros y descubre un 
                         lugar donde el cuidado es la prioridad!
                     </p>
+                </center>
+            </div>
+            <div class="col-md-6">
+                <center>
+                  <video width="400" height="260" controls>
+                    <source src="./vista/imagenes/videoplayback.mp4" type="video/mp4">
+                  </video>
+                </center>
+            </div>
+        </div>
+        <div style="padding-left: 30px;" class="row">
+            <div class="col-md-6">
+                <img style="padding-left: 90px; padding-top: 50px;" src="./vista/imagenes/logoMAnzana.png" alt="">
+            </div>
+            <div class="col-md-6">
+                <center>
+                  <center>
+                    <p style=" padding-right:50px ; padding-top: 70px; font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing: 0.05em;">
+                        Las Manzanas son áreas de la ciudad en las que se tiene la infraestructura y
+                        servicios para atender de manera próxima y simultánea a las cuidadoras y a sus
+                        familias. Por ejemplo, en una Manzana del Cuidado las cuidadoras y quienes ellas
+                        cuidan pueden encontrar colegios, jardines, parques, hospitales, centros de atención
+                        para personas mayores.
+                    </p>
+                </center>
                 </center>
             </div>
         </div>
