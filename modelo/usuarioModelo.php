@@ -9,7 +9,7 @@ class mdlUsuario {
         // Cifrar antes de guardar en la base de datos
         $password_cifrado = password_hash($Contrasena, PASSWORD_DEFAULT);
         try {
-            $respuestaUsuario = conexion::conectar()->prepare("INSERT INTO usuarios(correo, contrasena, id_rol) VALUES (:Correo, :Contrasena, 4)");
+            $respuestaUsuario = conexion::conectar()->prepare("INSERT INTO usuarios(correo, contrasena, id_rol) VALUES (:Correo, :Contrasena, 1)");
             $respuestaUsuario->bindParam(":Correo", $Correo);
             $respuestaUsuario->bindParam(":Contrasena", $password_cifrado);
             if ($respuestaUsuario->execute()) {

@@ -44,13 +44,13 @@ $("#formLogin").submit(function(event) {
     function determineDashboard(tipoUsuario) {
         switch (tipoUsuario) {
             case 1:
-                return "../vista/aprendiz.php";
-            case 2:
-                return "../vista/instructor.php";
-            case 3:
-                return "../vista/administrador.php";
-            case 4:
                 return "../vista/usuario.php";
+            case 2:
+                return "../vista/establecimiento.php";
+            case 3:
+                return "../vista/manzanas.php";
+            case 4:
+                return "../vista/mujercuidadora.php";
             default:
                 return "../vista/index.php"; // Página predeterminada en caso de rol desconocido
         }
