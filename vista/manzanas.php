@@ -91,13 +91,41 @@
     <!-- Contenido principal -->
     <div class="main-content">
         <div class="container">
-      
+        <div class="row">
+        <div class="col-md-4">
+            <h3>Mapa Manzana Antonio Nariño</h3>
+            <img class="scale-with-grid" src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/08/map-manz-anton_.svg" alt="Mapa Manzana Antonio Nariño" width="" height="">
+        </div>
+        <div class="col-md-4">
+            <h3>Manzana Teusaquillo</h3>
+            <img class="scale-with-grid" src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/07/map-manz-teu_.svg" alt="Mapa Manzana Teusaquillo" width="" height="">
+        </div>
+        <div class="col-md-4">
+            <h3>Manzana Puente Aranda</h3>
+            <img class="scale-with-grid" src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/07/map-manz-pua_.svg" alt="Mapa Manzana Puente Aranda" width="" height="">
+        </div>
+        <div class="col-md-4">
+            <h3>Manzana Suba - Fontanar del Rio</h3>
+            <img class="scale-with-grid" src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/07/map-manz-su_.svg" alt="Mapa Manzana Suba - Fontanar del Rio" width="" height="">
+        </div>
+        <div class="col-md-4">
+            <h3>Manzana Fontibón</h3>
+            <img class="scale-with-grid" src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/07/map-manz-fo_.svg" alt="Mapa Manzana Fontibón" width="" height="">
+        </div>
+        <div class="col-md-4">
+            <h3>Manzana Chapinero</h3>
+            <img class="scale-with-grid" src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/07/map-manz-cha_.svg" alt="Mapa Manzana Chapinero" width="" height="">
+        </div>
+        
+    </div>
+</div>
     </div>
     
     </div>
     <!-- Pie de página -->
     <footer class="footer text-center">
         <div class="container">
+        <img src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/07/cuidamos-a-las-que-nos-cuidan.svg" alt="Texto alternativo de la imagen">
             © 2023 SENA
         </div>
     </footer>
