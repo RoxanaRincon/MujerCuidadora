@@ -11,15 +11,16 @@ class Conexion{
 
         try{
 
-            $db= new PDO("mysql:host=$host;dbname=$dbname");
+            $db= new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
-        }catch (){
+            $db->setAtrribute(PDO::ATTR_ERMODE, PDO::ERRMODE_EXCEPTION); 
 
+            $db->exce("SET NAMES utf8");
+
+        }catch (PDO Exception $e){
+            die("Error de Conexion: ".$e->getmessage());
         }
-
+        return $db;
     }
 
-    
-
-    
 }
