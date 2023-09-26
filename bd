@@ -1,0 +1,341 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 26-09-2023 a las 17:15:10
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `manzanas`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `establecimientos`
+--
+
+CREATE TABLE `establecimientos` (
+  `EstablecimientoID` int(11) NOT NULL,
+  `Codigo` varchar(50) NOT NULL,
+  `Nombre` varchar(255) NOT NULL,
+  `Responsable` varchar(255) DEFAULT NULL,
+  `Direccion` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `establecimientos`
+--
+
+INSERT INTO `establecimientos` (`EstablecimientoID`, `Codigo`, `Nombre`, `Responsable`, `Direccion`) VALUES
+(1, 'EST001', 'Establecimiento1', 'Responsable1', 'Dirección Establecimiento 1'),
+(2, 'EST002', 'Establecimiento2', 'Responsable2', 'Dirección Establecimiento 2'),
+(3, 'EST003', 'Establecimiento3', 'Responsable3', 'Dirección Establecimiento 3');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `manzanascuidado`
+--
+
+CREATE TABLE `manzanascuidado` (
+  `ManzanaID` int(11) NOT NULL,
+  `Codigo` varchar(50) NOT NULL,
+  `Nombre` varchar(255) NOT NULL,
+  `Localidad` varchar(255) NOT NULL,
+  `Direccion` varchar(255) NOT NULL,
+  `MunicipioID` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `mujerescuidadoras`
+--
+
+CREATE TABLE `mujerescuidadoras` (
+  `MujerID` int(11) NOT NULL,
+  `TipoDocumento` varchar(50) NOT NULL,
+  `Documento` varchar(50) NOT NULL,
+  `Nombres` varchar(255) NOT NULL,
+  `Apellidos` varchar(255) NOT NULL,
+  `Telefono` varchar(20) DEFAULT NULL,
+  `CorreoElectronico` varchar(255) DEFAULT NULL,
+  `Ciudad` varchar(255) DEFAULT NULL,
+  `Direccion` varchar(255) DEFAULT NULL,
+  `Ocupacion` varchar(255) DEFAULT NULL,
+  `ServiciosPreferidos` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `mujerescuidadoras`
+--
+
+INSERT INTO `mujerescuidadoras` (`MujerID`, `TipoDocumento`, `Documento`, `Nombres`, `Apellidos`, `Telefono`, `CorreoElectronico`, `Ciudad`, `Direccion`, `Ocupacion`, `ServiciosPreferidos`) VALUES
+(1, 'Cédula', '123456789', 'María', 'González', '123-456-7890', 'maria@email.com', 'Ciudad1', 'Dirección1', 'Enfermera', 'SERV001, SERV002'),
+(2, 'Pasaporte', 'AB123456', 'Ana', 'López', '987-654-3210', 'ana@email.com', 'Ciudad2', 'Dirección2', 'Maestra', 'SERV002'),
+(3, 'Cédula', '987654321', 'Juan', 'Pérez', '555-555-5555', 'juan@email.com', 'Ciudad3', 'Dirección3', 'Ingeniero', 'SERV001');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `municipios`
+--
+
+CREATE TABLE `municipios` (
+  `MunicipioID` int(11) NOT NULL,
+  `Nombre` varchar(255) NOT NULL,
+  `Localidad` varchar(255) NOT NULL,
+  `Direccion` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `municipios`
+--
+
+INSERT INTO `municipios` (`MunicipioID`, `Nombre`, `Localidad`, `Direccion`) VALUES
+(1, 'Municipio1', 'Localidad1', 'Dirección1'),
+(2, 'Municipio2', 'Localidad2', 'Dirección2'),
+(3, 'Municipio3', 'Localidad3', 'Dirección3'),
+(4, 'Municipio1', 'Localidad1', 'Dirección1'),
+(5, 'Municipio2', 'Localidad2', 'Dirección2'),
+(6, 'Municipio3', 'Localidad3', 'Dirección3');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `propuestasasistencia`
+--
+
+CREATE TABLE `propuestasasistencia` (
+  `PropuestaID` int(11) NOT NULL,
+  `MujerID` int(11) DEFAULT NULL,
+  `ManzanaID` int(11) DEFAULT NULL,
+  `ServicioID` int(11) DEFAULT NULL,
+  `Fecha` date DEFAULT NULL,
+  `Hora` time DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `roles`
+--
+
+CREATE TABLE `roles` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `roles`
+--
+
+INSERT INTO `roles` (`id`, `nombre`) VALUES
+(1, 'Administrador'),
+(2, 'UsuarioGeneral');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `servicios`
+--
+
+CREATE TABLE `servicios` (
+  `ServicioID` int(11) NOT NULL,
+  `Codigo` varchar(50) NOT NULL,
+  `Nombre` varchar(255) NOT NULL,
+  `Descripcion` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `servicios`
+--
+
+INSERT INTO `servicios` (`ServicioID`, `Codigo`, `Nombre`, `Descripcion`) VALUES
+(1, 'SERV001', 'Servicio1', 'Descripción del Servicio 1'),
+(2, 'SERV002', 'Servicio2', 'Descripción del Servicio 2'),
+(3, 'SERV003', 'Servicio3', 'Descripción del Servicio 3');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tokensrestauracion`
+--
+
+CREATE TABLE `tokensrestauracion` (
+  `TokenID` int(11) NOT NULL,
+  `UsuarioID` int(11) DEFAULT NULL,
+  `Token` varchar(255) NOT NULL,
+  `Expiracion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `correo` varchar(100) NOT NULL,
+  `contrasena` varchar(255) NOT NULL,
+  `id_rol` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `correo`, `contrasena`, `id_rol`) VALUES
+(3, 'nuevo@nuevo.com', '$2y$10$3EJ/l0gRqRjyngb4evznWe.6NzbxSlVPWAlJOK9pd0dfwOPqVgzWy', 4);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `establecimientos`
+--
+ALTER TABLE `establecimientos`
+  ADD PRIMARY KEY (`EstablecimientoID`);
+
+--
+-- Indices de la tabla `manzanascuidado`
+--
+ALTER TABLE `manzanascuidado`
+  ADD PRIMARY KEY (`ManzanaID`),
+  ADD KEY `MunicipioID` (`MunicipioID`);
+
+--
+-- Indices de la tabla `mujerescuidadoras`
+--
+ALTER TABLE `mujerescuidadoras`
+  ADD PRIMARY KEY (`MujerID`);
+
+--
+-- Indices de la tabla `municipios`
+--
+ALTER TABLE `municipios`
+  ADD PRIMARY KEY (`MunicipioID`);
+
+--
+-- Indices de la tabla `propuestasasistencia`
+--
+ALTER TABLE `propuestasasistencia`
+  ADD PRIMARY KEY (`PropuestaID`),
+  ADD KEY `MujerID` (`MujerID`),
+  ADD KEY `ManzanaID` (`ManzanaID`),
+  ADD KEY `ServicioID` (`ServicioID`);
+
+--
+-- Indices de la tabla `servicios`
+--
+ALTER TABLE `servicios`
+  ADD PRIMARY KEY (`ServicioID`);
+
+--
+-- Indices de la tabla `tokensrestauracion`
+--
+ALTER TABLE `tokensrestauracion`
+  ADD PRIMARY KEY (`TokenID`),
+  ADD KEY `UsuarioID` (`UsuarioID`);
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `establecimientos`
+--
+ALTER TABLE `establecimientos`
+  MODIFY `EstablecimientoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `manzanascuidado`
+--
+ALTER TABLE `manzanascuidado`
+  MODIFY `ManzanaID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `mujerescuidadoras`
+--
+ALTER TABLE `mujerescuidadoras`
+  MODIFY `MujerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `municipios`
+--
+ALTER TABLE `municipios`
+  MODIFY `MunicipioID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de la tabla `propuestasasistencia`
+--
+ALTER TABLE `propuestasasistencia`
+  MODIFY `PropuestaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `servicios`
+--
+ALTER TABLE `servicios`
+  MODIFY `ServicioID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `tokensrestauracion`
+--
+ALTER TABLE `tokensrestauracion`
+  MODIFY `TokenID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `manzanascuidado`
+--
+ALTER TABLE `manzanascuidado`
+  ADD CONSTRAINT `manzanascuidado_ibfk_1` FOREIGN KEY (`MunicipioID`) REFERENCES `municipios` (`MunicipioID`);
+
+--
+-- Filtros para la tabla `propuestasasistencia`
+--
+ALTER TABLE `propuestasasistencia`
+  ADD CONSTRAINT `propuestasasistencia_ibfk_1` FOREIGN KEY (`MujerID`) REFERENCES `mujerescuidadoras` (`MujerID`),
+  ADD CONSTRAINT `propuestasasistencia_ibfk_2` FOREIGN KEY (`ManzanaID`) REFERENCES `manzanascuidado` (`ManzanaID`),
+  ADD CONSTRAINT `propuestasasistencia_ibfk_3` FOREIGN KEY (`ServicioID`) REFERENCES `servicios` (`ServicioID`);
+
+--
+-- Filtros para la tabla `tokensrestauracion`
+--
+ALTER TABLE `tokensrestauracion`
+  ADD CONSTRAINT `tokensrestauracion_ibfk_1` FOREIGN KEY (`UsuarioID`) REFERENCES `usuarios` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
