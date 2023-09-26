@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-09-2023 a las 17:15:10
+-- Tiempo de generación: 26-09-2023 a las 21:29:57
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -32,17 +32,18 @@ CREATE TABLE `establecimientos` (
   `Codigo` varchar(50) NOT NULL,
   `Nombre` varchar(255) NOT NULL,
   `Responsable` varchar(255) DEFAULT NULL,
-  `Direccion` varchar(255) DEFAULT NULL
+  `Direccion` varchar(255) DEFAULT NULL,
+  `ServicioID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `establecimientos`
 --
 
-INSERT INTO `establecimientos` (`EstablecimientoID`, `Codigo`, `Nombre`, `Responsable`, `Direccion`) VALUES
-(1, 'EST001', 'Establecimiento1', 'Responsable1', 'Dirección Establecimiento 1'),
-(2, 'EST002', 'Establecimiento2', 'Responsable2', 'Dirección Establecimiento 2'),
-(3, 'EST003', 'Establecimiento3', 'Responsable3', 'Dirección Establecimiento 3');
+INSERT INTO `establecimientos` (`EstablecimientoID`, `Codigo`, `Nombre`, `Responsable`, `Direccion`, `ServicioID`) VALUES
+(4, 'EST001', 'Establecimiento Ejemplo 1', 'Responsable 1', 'Dirección Ejemplo 1', 1),
+(5, 'EST002', 'Establecimiento Ejemplo 2', 'Responsable 2', 'Dirección Ejemplo 2', 2),
+(6, 'EST003', 'Establecimiento Ejemplo 3', 'Responsable 3', 'Dirección Ejemplo 3', 3);
 
 -- --------------------------------------------------------
 
@@ -196,13 +197,6 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`id`, `correo`, `contrasena`, `id_rol`) VALUES
-(3, 'nuevo@nuevo.com', '$2y$10$3EJ/l0gRqRjyngb4evznWe.6NzbxSlVPWAlJOK9pd0dfwOPqVgzWy', 4);
-
---
 -- Índices para tablas volcadas
 --
 
@@ -210,7 +204,8 @@ INSERT INTO `usuarios` (`id`, `correo`, `contrasena`, `id_rol`) VALUES
 -- Indices de la tabla `establecimientos`
 --
 ALTER TABLE `establecimientos`
-  ADD PRIMARY KEY (`EstablecimientoID`);
+  ADD PRIMARY KEY (`EstablecimientoID`),
+  ADD KEY `ServicioID` (`ServicioID`);
 
 --
 -- Indices de la tabla `manzanascuidado`
@@ -241,6 +236,12 @@ ALTER TABLE `propuestasasistencia`
   ADD KEY `ServicioID` (`ServicioID`);
 
 --
+-- Indices de la tabla `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `servicios`
 --
 ALTER TABLE `servicios`
@@ -257,7 +258,8 @@ ALTER TABLE `tokensrestauracion`
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_rol` (`id_rol`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -267,7 +269,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `establecimientos`
 --
 ALTER TABLE `establecimientos`
-  MODIFY `EstablecimientoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `EstablecimientoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `manzanascuidado`
@@ -294,6 +296,12 @@ ALTER TABLE `propuestasasistencia`
   MODIFY `PropuestaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT de la tabla `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de la tabla `servicios`
 --
 ALTER TABLE `servicios`
@@ -309,17 +317,25 @@ ALTER TABLE `tokensrestauracion`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
+-- Filtros para la tabla `establecimientos`
+--
+ALTER TABLE `establecimientos`
+  ADD CONSTRAINT `establecimientos_ibfk_1` FOREIGN KEY (`ServicioID`) REFERENCES `servicios` (`ServicioID`);
+
+--
 -- Filtros para la tabla `manzanascuidado`
 --
 ALTER TABLE `manzanascuidado`
-  ADD CONSTRAINT `manzanascuidado_ibfk_1` FOREIGN KEY (`MunicipioID`) REFERENCES `municipios` (`MunicipioID`);
+  ADD CONSTRAINT `manzanascuidado_ibfk_1` FOREIGN KEY (`MunicipioID`) REFERENCES `municipios` (`MunicipioID`),
+  ADD CONSTRAINT `manzanascuidado_ibfk_2` FOREIGN KEY (`MunicipioID`) REFERENCES `municipios` (`MunicipioID`),
+  ADD CONSTRAINT `manzanascuidado_ibfk_3` FOREIGN KEY (`MunicipioID`) REFERENCES `municipios` (`MunicipioID`);
 
 --
 -- Filtros para la tabla `propuestasasistencia`
@@ -334,6 +350,12 @@ ALTER TABLE `propuestasasistencia`
 --
 ALTER TABLE `tokensrestauracion`
   ADD CONSTRAINT `tokensrestauracion_ibfk_1` FOREIGN KEY (`UsuarioID`) REFERENCES `usuarios` (`id`);
+
+--
+-- Filtros para la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_rol`) REFERENCES `roles` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
