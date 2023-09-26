@@ -1,5 +1,5 @@
 <?php
-// Importa la clase Conexion desde conexion.php (reemplaza con la ruta correcta)
+
 require_once('conexion.php');
 
 class MunicipiosModelo {
@@ -10,7 +10,7 @@ class MunicipiosModelo {
         $this->conexion = Conexion::conectar();
     }
 
-    // Función para insertar un nuevo municipio en la base de datos
+    // Función insertar nuevo municipio en BD
     public function insertarMunicipio($nombre, $localidad, $direccion) {
         // Consulta SQL para insertar un nuevo municipio
         $consulta = "INSERT INTO municipios (Nombre, Localidad, Direccion) VALUES (?, ?, ?)";
@@ -22,6 +22,7 @@ class MunicipiosModelo {
             return false; 
         }
     }
+
     public function obtenerMunicipios() {
 
         $consulta = "SELECT * FROM municipios";
@@ -37,6 +38,5 @@ class MunicipiosModelo {
         }
     }
     
-
 }
 ?>
