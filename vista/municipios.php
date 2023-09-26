@@ -39,7 +39,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="../vista/mujercuidadora.php"> Mujer cuidadora </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="../vista/manzanas.php">Mnazanas de cuidado</a>
+                        <a class="dropdown-item" href="../vista/manzanas.php">Manzanas de cuidado</a>
                         </div>
                 </li>
                     <li class="nav-item dropdown">
