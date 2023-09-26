@@ -91,7 +91,61 @@
     <!-- Contenido principal -->
     <div class="main-content">
         <div class="container">
-     
+        <h1 class="text-center">Gestión de Servicios</h1>
+        <!-- Botón para agregar un nuevo servicio -->
+        <button type="button" class="btn btn-primary mb-3" id="agregarServicio">Agregar Servicio</button>
+
+        <!-- Tabla para mostrar la lista de servicios -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí puedes cargar dinámicamente la lista de servicios desde la base de datos utilizando AJAX -->
+                <!-- Cada servicio se mostrará como una fila en la tabla -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal para agregar/editar servicio -->
+    <div class="modal fade" id="servicioModal" tabindex="-1" role="dialog" aria-labelledby="servicioModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="servicioModalLabel">Agregar Servicio</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario para agregar/editar servicio -->
+                    <form id="servicioForm">
+                        <input type="hidden" id="ServicioID" name="ServicioID" value="0">
+                        <div class="form-group">
+                            <label for="Codigo">Código:</label>
+                            <input type="text" class="form-control" id="Codigo" name="Codigo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="Nombre" name="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Descripcion">Descripción:</label>
+                            <textarea class="form-control" id="Descripcion" name="Descripcion"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="guardarServicio">Guardar</button>
+                </div>
+            </div>
+        </div>
     </div>
     
     </div>

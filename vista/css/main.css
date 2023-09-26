@@ -76,7 +76,7 @@ body {
     height: 420px;
     transform-origin: bottom right;
     background: linear-gradient(0deg,transparent, 
-    transparent, #9B84B2, #9B84B2, #9B84B2);
+    transparent, #7D3B88, #7D3B88, #7D3B88);
     z-index: 1;
     animation: animate 6s linear infinite;
 }
@@ -91,7 +91,7 @@ body {
     height: 420px;
     transform-origin: bottom right;
     background: linear-gradient(0deg,transparent, 
-    transparent, #9B84B2, #9B84B2, #9B84B2);
+    transparent, #7D3B88, #7D3B88, #7D3B88);
     z-index: 1;
     animation: animate 6s linear infinite;
     animation-delay: -3s;
@@ -147,7 +147,7 @@ body {
 .boxRegistro form,
 .box form{
     position: absolute;
-    background: #F9F5FF;
+    background: #090909;
     inset: 4px;
     padding: 30px 40px;
     z-index: 2;

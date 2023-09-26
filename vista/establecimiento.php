@@ -91,8 +91,47 @@
     <!-- Contenido principal -->
     <div class="main-content">
         <div class="container">
-        
+       
+        <h1 class="text-center">Gestión de Establecimientos</h1>
+        <button class="btn btn-primary mb-3" id="addButton">Agregar Establecimiento</button>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Código</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Responsable</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Aquí se mostrarán los datos de la tabla -->
+            </tbody>
+        </table>
 
+        <!-- Formulario de Registro de Establecimiento (inicialmente oculto) -->
+        <div id="registrationForm" style="display: none;">
+            <h2>Registro de Establecimiento</h2>
+            <form action="procesar_registro_establecimiento.php" method="POST">
+                <div class="form-group">
+                    <label for="Codigo">Código:</label>
+                    <input type="text" class="form-control" id="Codigo" name="Codigo" required>
+                </div>
+                <div class="form-group">
+                    <label for="Nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="Nombre" name="Nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="Responsable">Responsable:</label>
+                    <input type="text" class="form-control" id="Responsable" name="Responsable">
+                </div>
+                <div class="form-group">
+                    <label for="Direccion">Dirección:</label>
+                    <input type="text" class="form-control" id="Direccion" name="Direccion">
+                </div>
+                <button type="submit" class="btn btn-success">Registrar Establecimiento</button>
+            </form>
+        </div>
         </div>
     </div>
 
@@ -107,7 +146,14 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
-
+    <script>
+        // Función para mostrar u ocultar el formulario de registro usando jQuery
+        $(document).ready(function() {
+            $('#addButton').click(function() {
+                $('#registrationForm').toggle();
+            });
+        });
+    </script>
     
 </body>
 </html>

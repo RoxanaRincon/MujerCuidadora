@@ -91,7 +91,36 @@
     <!-- Contenido principal -->
     <div class="main-content">
         <div class="container">
-        
+        <h1 class="text-center">Propuesta de Asistencia</h1>
+        <form id="propuestaForm">
+            <div class="form-group">
+                <label for="MujerID">Selecciona tu nombre:</label>
+                <select class="form-control" id="MujerID" name="MujerID" required>
+                    <!-- Aquí puedes cargar dinámicamente las opciones de nombres de mujeres cuidadoras utilizando AJAX -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ManzanaID">Selecciona la manzana:</label>
+                <select class="form-control" id="ManzanaID" name="ManzanaID" required>
+                    <!-- Aquí puedes cargar dinámicamente las opciones de manzanas utilizando AJAX -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ServicioID">Selecciona el servicio:</label>
+                <select class="form-control" id="ServicioID" name="ServicioID" required>
+                    <!-- Aquí puedes cargar dinámicamente las opciones de servicios utilizando AJAX -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Fecha">Fecha:</label>
+                <input type="date" class="form-control" id="Fecha" name="Fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="Hora">Hora:</label>
+                <input type="time" class="form-control" id="Hora" name="Hora" required>
+            </div>
+            <button type="button" class="btn btn-primary" id="enviarPropuesta">Enviar Propuesta</button>
+        </form>
     </div>
     
     </div>
