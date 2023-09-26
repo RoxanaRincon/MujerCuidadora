@@ -1,8 +1,8 @@
-<php
+<?php
 
 class Conexion{
 
-    public static funtion Conectar(){
+    public static function Conectar(){
 
         $host='localhost';
         $dbname='';
@@ -17,7 +17,7 @@ class Conexion{
 
             $db->exce("SET NAMES utf8");
 
-        }catch (PDO Exception $e){
+        }catch (PDOException $e){
             die("Error de Conexion: ".$e->getmessage());
         }
         return $db;
