@@ -57,10 +57,10 @@
                     <a href="#" class="nav_link active"> 
                         <i class='bx bx-grid-alt nav_icon'></i>
                          <span class="nav_name">Parametricas</span> </a> 
-                         <a href="#" class="nav_link"> 
+                         <a href="../vista/usuario.php" class="nav_link"> 
                             <i class='bx bx-user nav_icon'></i>
                           <span class="nav_name">Usuarios</span> </a> 
-                                    <a href="../vista/usuario.php" class="nav_link"> 
+                                        <a href="#" class="nav_link"> 
                                         <i class='bx bx-bar-chart-alt-2 nav_icon'></i> 
                                         <span class="nav_name">Reportes</span> </a> 
                                             <a href="../vista/municipios.php" class="nav_link"> 
@@ -75,26 +75,7 @@
     <!-- Contenido principal -->
     <div class="main-content">
         <div class="container">
-        <div class="row mt-4">
-                <div class="col-md-6 offset-md-3">
-                    <h2>Agregar Municipio</h2>
-                    <form id="formularioAgregarMunicipio">
-                        <div class="form-group">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="localidad">Localidad:</label>
-                            <input type="text" class="form-control" id="localidad" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="direccion">Dirección:</label>
-                            <input type="text" class="form-control" id="direccion" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Agregar Municipio</button>
-                    </form>
-                </div>
-            </div>
+           
 
         </div>
     </div>
@@ -110,5 +91,3 @@
     
 </body>
 </html>
-
-
