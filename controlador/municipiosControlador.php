@@ -22,15 +22,13 @@ class MunicipiosController {
     }
 
     public function listarMunicipios() {
-        // Llama al método del modelo para obtener la lista de municipios
-        $municipios = $this->municipiosModel->obtenerMunicipios();
-    
-        // Devuelve la lista de municipios en formato JSON
-        header('Content-Type: application/json');
-        echo json_encode($municipios);
+        
+    $municipios = $this->municipiosModel->obtenerMunicipios();
+    header('Content-Type: application/json');
+    echo json_encode($municipios);
     }
 
-    // Otras funciones del controlador pueden agregarse aquí
+
 
 }
 

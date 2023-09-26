@@ -91,10 +91,11 @@
     <!-- Contenido principal -->
     <div class="main-content">
         <div class="container">
-        
+      
+
+        </div>
     </div>
-    
-    </div>
+
     <!-- Pie de página -->
     <footer class="footer text-center">
         <div class="container">

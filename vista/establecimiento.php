@@ -38,6 +38,9 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="../vista/mujercuidadora.php"> Mujer cuidadora </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../vista/manzanas.php">Mnazanas de cuidado</a>
+                        </div>
                 </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,10 +51,12 @@
                         <a class="dropdown-item" href="../vista/propuesta.php">Radicar Propuesta de asistencia</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="../vista/municipios.php">Gestionar Municipios</a>
+                        <a class="dropdown-item" href="../vista/servicios.php">Gestionar Servicios</a>
                         </div>
+                        
                     </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="../vista/contacto.php">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -86,26 +91,7 @@
     <!-- Contenido principal -->
     <div class="main-content">
         <div class="container">
-        <div class="row mt-4">
-                <div class="col-md-6 offset-md-3">
-                    <h2></h2>
-                    <form id="formularioAgregarMunicipio">
-                        <div class="form-group">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="localidad">Localidad:</label>
-                            <input type="text" class="form-control" id="localidad" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="direccion">Dirección:</label>
-                            <input type="text" class="form-control" id="direccion" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Agregar Municipio</button>
-                    </form>
-                </div>
-            </div>
+        
 
         </div>
     </div>
