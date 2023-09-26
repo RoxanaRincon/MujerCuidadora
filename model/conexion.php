@@ -18,7 +18,8 @@ class Conexion{
             $db->exce("SET NAMES utf8");
 
         }catch (PDOException $e){
-            die("Error de Conexion: ".$e->getmessage());
+
+            die("Error de Conexion: " . $e->getMessage());
         }
         return $db;
     }
