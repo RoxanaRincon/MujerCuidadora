@@ -5,11 +5,9 @@ require_once('../model/municipiosModelo.php');
 class MunicipiosController {
     private $municipiosModel;
 
-    public function __construct() {
-        $this->municipiosModel = new MunicipiosModelo();
-    }
-
     public function agregarMunicipio($nombre, $localidad, $direccion) {
+        $this->municipiosModel = new MunicipiosModelo(); // Crear instancia cuando sea necesario
+
         $exito = $this->municipiosModel->insertarMunicipio($nombre, $localidad, $direccion);
 
         if ($exito) {
@@ -22,14 +20,12 @@ class MunicipiosController {
     }
 
     public function listarMunicipios() {
-        
-    $municipios = $this->municipiosModel->obtenerMunicipios();
-    header('Content-Type: application/json');
-    echo json_encode($municipios);
+        $this->municipiosModel = new MunicipiosModelo(); // Crear instancia cuando sea necesario
+
+        $municipios = $this->municipiosModel->obtenerMunicipios();
+        header('Content-Type: application/json');
+        echo json_encode($municipios);
     }
-
-
-
 }
 
 if (isset($_POST["agregarMunicipio"])) {
