@@ -6,7 +6,7 @@ class Conexion{
     public static function conectar(){
         // Datos de conexión a la base de datos
         $host = 'localhost'; 
-        $dbname = 'MANZANAS';
+        $dbname = 'manzanas';
         $username = 'root';
         $password = '';
 
