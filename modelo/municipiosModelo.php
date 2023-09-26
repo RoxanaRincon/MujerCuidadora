@@ -12,7 +12,7 @@ class MunicipiosModelo {
 
     // Función insertar nuevo municipio en BD
     public function insertarMunicipio($nombre, $localidad, $direccion) {
-        // Consulta SQL para insertar un nuevo municipio
+        // Consulta SQL para insertar un nuevo municipio!!
         $consulta = "INSERT INTO municipios (Nombre, Localidad, Direccion) VALUES (?, ?, ?)";
         $stmt = $this->conexion->prepare($consulta);
         $stmt->bind_param("sss", $nombre, $localidad, $direccion);
