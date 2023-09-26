@@ -15,6 +15,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
    
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/formulario.css">
     <script src="js/mapa.js"></script>
     
 </head>
@@ -90,14 +91,60 @@
     </div>
     <!-- Contenido principal -->
     <div class="main-content">
-        <div class="container">
-      
+    <div class="container">
+        <h1>Registro de Mujeres Cuidadoras</h1>
+        <form action="procesar_registro.php" method="POST">
+            <div class="form-group">
+                <label for="TipoDocumento">Tipo de Documento:</label>
+                <input type="text" id="TipoDocumento" name="TipoDocumento" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="Documento">Documento:</label>
+                <input type="text" id="Documento" name="Documento" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="Nombres">Nombres:</label>
+                <input type="text" id="Nombres" name="Nombres" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="Apellidos">Apellidos:</label>
+                <input type="text" id="Apellidos" name="Apellidos" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="Telefono">Teléfono:</label>
+                <input type="tel" id="Telefono" name="Telefono" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="CorreoElectronico">Correo Electrónico:</label>
+                <input type="email" id="CorreoElectronico" name="CorreoElectronico" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Ciudad">Ciudad:</label>
+                <input type="text" id="Ciudad" name="Ciudad" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Direccion">Dirección:</label>
+                <input type="text" id="Direccion" name="Direccion" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Ocupacion">Ocupación:</label>
+                <input type="text" id="Ocupacion" name="Ocupacion" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="ServiciosPreferidos">Servicios Preferidos:</label>
+                <textarea id="ServiciosPreferidos" name="ServiciosPreferidos" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Registrar</button>
+        </form>
     </div>
     
     </div>
     <!-- Pie de página -->
     <footer class="footer text-center">
         <div class="container">
+        <img src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/07/cuidamos-a-las-que-nos-cuidan.svg" alt="Texto alternativo de la imagen">
+       
+        
             © 2023 SENA
         </div>
     </footer>

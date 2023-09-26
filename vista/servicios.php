@@ -98,7 +98,8 @@
     <!-- Pie de página -->
     <footer class="footer text-center">
         <div class="container">
-            © 2023 SENA
+        <img src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/07/cuidamos-a-las-que-nos-cuidan.svg" alt="Texto alternativo de la imagen">
+  © 2023 SENA
         </div>
     </footer>
     <script src="js/main.js"></script>
