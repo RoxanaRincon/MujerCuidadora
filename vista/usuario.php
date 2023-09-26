@@ -19,7 +19,9 @@
     
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="#">SENA</a>
+            <a class="navbar-brand" href="#">
+            <img src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/09/logo-manz-AntNar_.svg" alt="Manzanas del Cuidado" width="100" height="100">          
+        </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -41,20 +43,35 @@
                 </div>
             </div>
         </nav>
-        <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+        <div class="header_img"> <img src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/06/logo-simbolo-mc_.svg" alt=""> </div>
    
    
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
             <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
-                <div class="nav_list"> <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Users</span> </a> <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Bookmark</span> </a> <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> </div>
-            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+                <div class="nav_list"> 
+                    <a href="#" class="nav_link active"> 
+                        <i class='bx bx-grid-alt nav_icon'></i>
+                         <span class="nav_name">Parametricas</span> </a> 
+                         <a href="#" class="nav_link"> 
+                            <i class='bx bx-user nav_icon'></i>
+                          <span class="nav_name">Usuarios</span> </a> 
+                                    <a href="#" class="nav_link"> 
+                                        <i class='bx bx-bar-chart-alt-2 nav_icon'></i> 
+                                        <span class="nav_name">Reportes</span> </a> 
+                                            <a href="#" class="nav_link"> 
+                                            <i class='bx bx-map nav_icon'></i>
+                                            <span class="nav_name">Ubicación</span>
+                                        </a>
+                                    </div>
+            </div> <a href="#" class="nav_link"> 
+                <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
         </nav>
     </div>
     <!-- Contenido principal -->
     <div class="main-content">
-            <h4>MANZANAS DEL CUIDADO</h4>
+          
         <div class="container">
            
         <div id="map"></div>
