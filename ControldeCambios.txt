@@ -19,7 +19,7 @@ TAREAS LISTAS
 
 1. Eliminacion de todo los elementos del municipio
 2. ELiminar del documento de municipios(Los datos se almacenaran desde la base de datos)
-3 se implemnta mapa  con algunos ejemplos , falta conectar con bd
+
 
 
 
@@ -45,3 +45,6 @@ SE DECIDE  UTILIZAR  Y TRABAJAR CON LA VERSION  DE BASE DE DATOS MUJER.SQL ???
 
 
 
+PENDIENTES
+
+1. se implemnta mapa  con algunos ejemplos , falta conectar con bd
