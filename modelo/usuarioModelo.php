@@ -48,5 +48,25 @@ class mdlUsuario {
             return $error;
         }
     }
+
+
+    public static function mdlValidarRespuestas($correo, $respuesta1, $respuesta2) {
+        try {
+            $consulta = Conexion::conectar()->prepare("SELECT * FROM admin WHERE correoElectronico = :correo");
+            $consulta->bindParam(":correo", $correo);
+            $consulta->execute();
+            $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
+            
+            if ($usuario) {
+                if ($respuesta1 === $usuario['respuesta1'] && $respuesta2 === $usuario['respuesta2']) {
+                    return true; 
+                }
+            }
+            return false; 
+        } catch (Exception $error) {
+            return false; 
+        }
+    }
+
 }
 ?>
