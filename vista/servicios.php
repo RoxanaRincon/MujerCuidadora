@@ -89,7 +89,7 @@
         </nav>
     </div>
     <!-- Contenido principal -->
-    <div class="main-content">
+    <div class="main-content-fluid">
         <div class="container">
         <h1 class="text-center">Gestión de Servicios</h1>
         <!-- Botón para agregar un nuevo servicio -->

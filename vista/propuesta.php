@@ -89,7 +89,7 @@
         </nav>
     </div>
     <!-- Contenido principal -->
-    <div class="main-content">
+    <div class="main-content-responsive">
         <div class="container">
         <h1 class="text-center">Propuesta de Asistencia</h1>
         <form id="propuestaForm">

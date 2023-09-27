@@ -98,7 +98,7 @@
         </nav>
     </div>
     <!-- Contenido principal -->
-    <div class="main-content">
+    <div class="main-content-fluid">
 <div class="container">
 
             <div id="map">
