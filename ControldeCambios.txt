@@ -10,3 +10,22 @@ trabajo dos horas  maria paula
 
 arreglas formularios  de las demas vistas
 agregar los ajax   y las funcionalidades en los respectivos js creados en js
+
+
+
+TAREAS LISTAS
+
+1. Eliminacion de todo los elementos del municipio
+2. ELiminar del documento de municipios(Los datos se almacenaran desde la base de datos)
+
+
+
+
+
+
+
+
+TAREAS EN PROCESO
+
+Primeras horas paula
+1. Edicion de la vista de contacto
