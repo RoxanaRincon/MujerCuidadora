@@ -2,6 +2,7 @@ $(document).ready(function() {
     // Variable para almacenar el correo
     var correo = "";
 
+  
     // Manejo del evento click para el botón "PREGUNTAS DE SEGURIDAD"
     $("#preguntas-btn").on("click", function() {
         correo = $("#correoidfrm").val();
@@ -31,7 +32,6 @@ $(document).ready(function() {
 
     // Manejo del evento click para el botón "Validar Preguntas"
     $("#validar-preguntas").on("click", function() {
-        var correo = $("#correoidfrm").val();
         var respuesta1 = $("#respuesta1").val();
         var respuesta2 = $("#respuesta2").val();
 
@@ -42,9 +42,33 @@ $(document).ready(function() {
             dataType: "json",
             success: function(response) {
                 if (response.mensaje === "true") {
-                    // Si las respuestas son correctas, mostrar el campo para la nueva contraseña
-                    $("#preguntas-seguridad").fadeOut(1000);
-                    $("#nueva-contrasena").fadeIn(1000);
+                    // Si las respuestas son correctas, mostrar el campo de nueva contraseña
+                    
+
+                    var nuevaContrasena = $("#nuevaContrasena").val();
+
+                    $.ajax({
+                        url: "../controlador/usuarioControlador.php",
+                        method: "POST",
+                        data: { correo: correo, nuevaContrasena: nuevaContrasena, action: "guardarNuevaContrasena" },
+                        dataType: "json",
+                        success: function(response) {
+                            if (response.mensaje === "ok") {
+                                // Contraseña guardada correctamente, mostrar un mensaje de éxito
+                                alert("Contraseña cambiada con éxito. Ahora puedes iniciar sesión con la nueva contraseña.");
+                                // Redirigir al usuario a la página de inicio de sesión
+                                window.location.href = "../vista/login.php";
+                            } else {
+                                // Si hay un error al guardar la contraseña, mostrar un mensaje de error
+                                alert("Error al cambiar la contraseña. Inténtalo de nuevo.");
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.log(xhr, status, error);
+                            alert("Error al guardar la nueva contraseña.");
+                        }
+                    });
+
                 } else {
                     // Si las respuestas son incorrectas, mostrar un mensaje de error
                     alert("Respuestas incorrectas. Inténtalo de nuevo.");
@@ -57,32 +81,5 @@ $(document).ready(function() {
         });
     });
 
-    // Manejo del evento submit para el formulario de nueva contraseña
-    $("#formNuevaContrasena").submit(function(event) {
-        event.preventDefault();
-
-        var nuevaContrasena = $("#nuevaContrasena").val();
-
-        $.ajax({
-            url: "../controlador/usuarioControlador.php",
-            method: "POST",
-            data: { correo: correo, nuevaContrasena: nuevaContrasena, action: "guardarNuevaContrasena" },
-            dataType: "json",
-            success: function(response) {
-                if (response.mensaje === "ok") {
-                    // Contraseña guardada correctamente, mostrar un mensaje de éxito
-                    alert("Contraseña cambiada con éxito. Ahora puedes iniciar sesión con la nueva contraseña.");
-                    // Redirigir al usuario a la página de inicio de sesión
-                    window.location.href = "../vista/login.php";
-                } else {
-                    // Si hay un error al guardar la contraseña, mostrar un mensaje de error
-                    alert("Error al cambiar la contraseña. Inténtalo de nuevo.");
-                }
-            },
-            error: function(xhr, status, error) {
-                console.log(xhr, status, error);
-                alert("Error al guardar la nueva contraseña.");
-            }
-        });
-    });
+    
 });

@@ -11,7 +11,15 @@ class ctrUsuario {
 
 
 
-    
+    public function ctrGuardarNuevaContrasena($correo, $nuevaContrasena) {
+        $resultado = mdlUsuario::mdlActualizarContrasena($correo, $nuevaContrasena);
+        
+        if ($resultado === "ok") {
+            echo json_encode(["mensaje" => "ok"]);
+        } else {
+            echo json_encode(["mensaje" => "error"]);
+        }
+    }
 
     public function ctrIniciarSesion($correo, $contrasena) {
         $usuario = mdlUsuario::mdlIniciarSesion($correo, $contrasena);
@@ -68,6 +76,15 @@ if (isset($_POST["action"]) && $_POST["action"] === "validarRespuestas") {
     if (isset($_POST["correo"], $_POST["respuesta1"], $_POST["respuesta2"])) {
         $objUsuario = new ctrUsuario();
         $objUsuario->ctrValidarRespuestas($_POST["correo"], $_POST["respuesta1"], $_POST["respuesta2"]);
+    } else {
+        echo json_encode(["mensaje" => "Faltan datos"]);
+    }
+}
+
+if (isset($_POST["action"]) && $_POST["action"] === "guardarNuevaContrasena") {
+    if (isset($_POST["correo"], $_POST["nuevaContrasena"])) {
+        $objUsuario = new ctrUsuario();
+        $objUsuario->ctrGuardarNuevaContrasena($_POST["correo"], $_POST["nuevaContrasena"]);
     } else {
         echo json_encode(["mensaje" => "Faltan datos"]);
     }
