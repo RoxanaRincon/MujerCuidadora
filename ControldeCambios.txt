@@ -31,8 +31,11 @@ TAREAS EN PROCESO
 
 Primeras horas paula
 1. Edicion de la vista de contacto
-2. link para el footer btn youtube (https://www.youtube.com/watch?v=6ryKga2KBJ8)
-3. footer mockup
+2. links para redes del footer 
+    - facebook https://www.facebook.com/secredistmujer/
+    - Insta    https://www.instagram.com/sdmujerbogota/
+    - youtube  https://www.youtube.com/@SDMujer
+    - tiktok   https://www.tiktok.com/@secredistmujer
 
 
 IMPORTANTE 
