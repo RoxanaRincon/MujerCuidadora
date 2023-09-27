@@ -6,8 +6,7 @@ class mdlUsuario {
 
     public static function mdlGuardarUsuario($Correo, $Contrasena) {
         $GuardarUsuario = "";
-        // Cifrar antes de guardar en la base de datos
-      //  $password_cifrado = password_hash($Contrasena, PASSWORD_DEFAULT);
+   
         try {
             $respuestaUsuario = Conexion::conectar()->prepare("INSERT INTO admin(correoElectronico, contraseña) VALUES (:Correo, :Contrasena)");
             $respuestaUsuario->bindParam(":Correo", $Correo);
@@ -65,6 +64,24 @@ class mdlUsuario {
             return false; 
         } catch (Exception $error) {
             return $error; 
+        }
+    }
+
+    public static function mdlActualizarContrasena($correo, $nuevaContrasena) {
+        try {
+            
+            
+            $stmt = Conexion::conectar()->prepare("UPDATE admin SET contraseña = :nuevaContrasena WHERE correoElectronico = :correo");
+            $stmt->bindParam(":nuevaContrasena", $nuevaContrasena);
+            $stmt->bindParam(":correo", $correo);
+            
+            if ($stmt->execute()) {
+                return "ok"; // Contraseña actualizada con éxito
+            } else {
+                return "Error al actualizar la contraseña";
+            }
+        } catch (Exception $error) {
+            return $error->getMessage(); // Manejar errores si es necesario
         }
     }
 

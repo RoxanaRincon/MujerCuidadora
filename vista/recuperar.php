@@ -79,6 +79,16 @@
                     <input id="respuesta2" name="respuesta2" type="text" placeholder="Respuesta 2" required>
                 </div>
 
+                <div class="inputBox">
+                    <label for="nuevaContrasena">Nueva Contraseña:</label>
+                    <input id="nuevaContrasena" name="nuevaContrasena" type="password" placeholder="Nueva Contraseña" required>
+                </div>
+
+                <div class="inputBox">
+                    <label for="confirmarContrasena">Confirmar Contraseña:</label>
+                    <input id="confirmarContrasena" name="confirmarContrasena" type="password" placeholder="Confirmar Contraseña" required>
+                </div>
+
                 <br>
                 <!-- Validador de preguntas -->
                 <button id="validar-preguntas" type="button" class="btn btn-success">Validar Preguntas</button>
