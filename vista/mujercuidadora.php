@@ -20,7 +20,7 @@
     
 </head>
 <body id="body-pd">
-    <header class="header" id="header">
+    <header style="height: 60px" class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
     
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -90,6 +90,8 @@
         </nav>
     </div>
     <!-- Contenido principal -->
+    <br><br><br><br>
+    <button>Button</button>
     <div class="main-content">
     <div class="container">
         <h1>Registro de Mujeres Cuidadoras</h1>
