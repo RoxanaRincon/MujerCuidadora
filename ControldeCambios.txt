@@ -77,4 +77,11 @@ No me muestra el mapa en manzanas
 
 
 LOGIN  FUNCIONANDO CORRECTAMENTE CON  RECUPERACION CON PREGUNTAS  INCLUYE PREGUNTAS AL REGISTARR Y FUNCIONAMIENTO TOTAL 
-HACER PRUEBAS 
+HACER PRUEBAS
+
+correciones
+diseño login alargado
+aun sin registrar datos 
+verificacion dos pasos no guarda
+enviar script de la base de la base de datos 
+el mapa no se visualiza 
