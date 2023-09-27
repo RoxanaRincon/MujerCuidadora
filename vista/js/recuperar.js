@@ -31,6 +31,7 @@ $(document).ready(function() {
 
     // Manejo del evento click para el botón "Validar Preguntas"
     $("#validar-preguntas").on("click", function() {
+        var correo = $("#correoidfrm").val();
         var respuesta1 = $("#respuesta1").val();
         var respuesta2 = $("#respuesta2").val();
 
