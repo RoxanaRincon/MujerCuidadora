@@ -61,3 +61,7 @@ INICILAMNTE SE BASARA  LA RECUPERACION DE CONTRASEÑA EN  PREGUNTAS  DE SEGURIDA
 Procesos que hacen falta
 Conexion de login no conecta con la base de datos, login sin funcionamiento(correjir el proceso)
 
+
+
+FUNCIONA LOGIN CORRECTAMENTE...?
+
