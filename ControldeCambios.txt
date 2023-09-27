@@ -31,7 +31,7 @@ TAREAS EN PROCESO
 
 Primeras horas paula
 1. Edicion de la vista de contacto
-
+2. link para el footer btn youtube (https://www.youtube.com/watch?v=6ryKga2KBJ8)
 
 
 
