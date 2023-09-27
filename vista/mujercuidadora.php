@@ -92,7 +92,7 @@
     <!-- Contenido principal -->
     <br>
     <button>Button</button>
-    <div class="main-content">
+    <div class="main-content-fluid">
     <div class="container">
         <h1>Registro de Mujeres Cuidadoras</h1>
         <form action="procesar_registro.php" method="POST">

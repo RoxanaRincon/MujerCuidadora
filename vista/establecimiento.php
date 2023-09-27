@@ -92,7 +92,7 @@
         </nav>
     </div>
     <!-- Contenido principal -->
-    <div class="container-fluid">
+ <!--   <div class="container-fluid"-->
         <div class="container mt-3">
        
             <h1 class="text-center">Gestión de Establecimientos</h1>
@@ -114,7 +114,7 @@
         
 
         <!-- Formulario de Registro de Establecimiento (inicialmente oculto) -->
-        <div id="registrationForm" style="display: none;">
+        <div id="registrationForm" style="display: responsive;">
             <h2>Registro de Establecimiento</h2>
             <form action="procesar_registro_establecimiento.php" method="POST">
                 <div class="form-group">
