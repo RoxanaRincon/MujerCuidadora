@@ -98,3 +98,15 @@ NO TOCAR EL MAPA VOY AJUSTARLO
 
 IMPORTANTE
 compañera necesito ajustar el diseño del login 
+
+
+LOGIN DEJARLO FINAL ASI 
+
+PASOS A SEGUIR 
+
+1 BORRAR BASE DE DATOS 
+2 CREAR NUEVA BASE DE DATOS mujeres
+3 correr el script  que esta en el documento mujeres.sql 
+4 probar funcionalidades de login 
+5 probar mapa 
+6 no tocar nada  termino desarrollo final no mas tiempo trabajo f
