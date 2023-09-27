@@ -19,7 +19,7 @@ TAREAS LISTAS
 
 1. Eliminacion de todo los elementos del municipio
 2. ELiminar del documento de municipios(Los datos se almacenaran desde la base de datos)
-3. se ajusta  diseño del login con el nuevo mapa (no mover  se procede hacer recuperacion de contraseña) el login se mira feo con el mapa este hacerlo en otra vista, dejar login aparte
+3. se ajusta  diseño del login con el nuevo mapa (no mover  se procede hacer recuperacion de contraseña) el login se  ajusta con video 
 
 
 
@@ -45,7 +45,7 @@ SE DECIDE  UTILIZAR  Y TRABAJAR CON LA VERSION  DE BASE DE DATOS MUJER.SQL ???
 
 scriptsactualizacionmapa.sql se añade archivo apra ocntrol de cmabios en bd scripts ejecutables 
 
-el cifrado de contraseña no  funciona bien con la nueva base   por esto s einactiva pero queda funcionando el login y el registro con la nueva base mujeres.sql /NECESITA PROBARSE
+el cifrado de contraseña no  funciona bien con la nueva base   por esto se inactiva pero queda funcionando el login y el registro con la nueva base mujeres.sql /NECESITA PROBARSE
 
 PENDIENTES
 
@@ -55,7 +55,3 @@ PENDIENTES
 FUNCION  RECUPERAR CONTRASEÑA 
 
 INICILAMNTE SE BASARA  LA RECUPERACION DE CONTRASEÑA EN  PREGUNTAS  DE SEGURIDAD  PAR ANO TENER QUE UTILIZAR CORREOS YA QUE NO TENEMOS UN SERVIDOR DE CORREOS  PARA ENVIAR TOKENS DE RECUPERACION 
-
------------------------------------------------------------
-
-se realizo el diseño del login en el archivo contacto
