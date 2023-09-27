@@ -5,7 +5,7 @@ https://www.figma.com/file/SdwcPc0lFeP1b3hzh44Xzo/Untitled?type=design&node-id=0
 trabajo dos primeras horas roxana 
 
 implemenmtacion mapa  con manzanas  se utilizara  la vista manzanas.php 
-se implmenta mapa con algunos ejemplos en el js , pendiente conectar con bd 
+Importante! Dejar las dos bases de datos no eliminar cambios o renombrar.
 
 
 trabajo dos horas  maria paula 
@@ -31,3 +31,6 @@ TAREAS EN PROCESO
 
 Primeras horas paula
 1. Edicion de la vista de contacto
+
+
+
