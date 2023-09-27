@@ -4,11 +4,10 @@ include_once "../modelo/usuarioModelo.php";
 
 class ctrUsuario {
 
-    public function ctrGuardarUsuario($correo, $contrasena) {
-        $respuestaUsuarioM = mdlUsuario::mdlGuardarUsuario($correo, $contrasena);
+    public function ctrGuardarUsuario($correo, $contrasena, $pregunta1, $pregunta2, $respuesta1, $respuesta2) {
+        $respuestaUsuarioM = mdlUsuario::mdlGuardarUsuario($correo, $contrasena, $pregunta1, $pregunta2, $respuesta1, $respuesta2);
         echo json_encode($respuestaUsuarioM);
     }
-
 
 
     public function ctrGuardarNuevaContrasena($correo, $nuevaContrasena) {
@@ -57,10 +56,16 @@ if (isset($_POST["correoFrm"], $_POST["contrasenaFrm"])) {
     $objUsuario->ctrIniciarSesion($_POST["correoFrm"], $_POST["contrasenaFrm"]);
 }
 
-// Verificar si se ha enviado el formulario de registro de usuario
-if (isset($_POST["guardarCorreo"], $_POST["guardarContrasena"])) {
+if (isset($_POST["guardarCorreo"], $_POST["guardarContrasena"], $_POST["preguntaSeguridad1"], $_POST["preguntaSeguridad2"], $_POST["respuestaSeguridad1"], $_POST["respuestaSeguridad2"])) {
     $objUsuario = new ctrUsuario();
-    $objUsuario->ctrGuardarUsuario($_POST["guardarCorreo"], $_POST["guardarContrasena"]);
+    $correo = $_POST["guardarCorreo"];
+    $contrasena = $_POST["guardarContrasena"];
+    $pregunta1 = $_POST["preguntaSeguridad1"];
+    $pregunta2 = $_POST["preguntaSeguridad2"];
+    $respuesta1 = $_POST["respuestaSeguridad1"];
+    $respuesta2 = $_POST["respuestaSeguridad2"];
+    
+    $objUsuario->ctrGuardarUsuario($correo, $contrasena, $pregunta1, $pregunta2, $respuesta1, $respuesta2);
 }
 
 if (isset($_POST["action"]) && $_POST["action"] === "consultarPreguntas") {

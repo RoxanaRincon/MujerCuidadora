@@ -79,10 +79,10 @@
     <div class="inputBox">
         <span>Pregunta de seguridad 1:</span>
         <select id="preguntaSeguridad1" name="preguntaSeguridad1" required="required">
-            <option value="color">¿Cuál es tu color favorito?</option>
-            <option value="mascota">¿Cuál es el nombre de tu primera mascota?</option>
-            <option value="ciudad">¿En qué ciudad naciste?</option>
-            <option value="padre">¿Cuál es el nombre de soltera de tu madre?</option>
+        <option value="¿Cuál es tu comida favorita?">¿Cuál es tu comida favorita?</option>
+            <option value="¿Cuál es el nombre de tu mejor amigo de la infancia?">¿Cuál es el nombre de tu mejor amigo de la infancia?</option>
+            <option value="¿Cuál es tu hobby favorito?">¿Cuál es tu hobby favorito?</option>
+            <option value="¿En qué lugar de vacaciones te sentiste más feliz?">¿En qué lugar de vacaciones te sentiste más feliz?</option>
             <!-- Agrega más opciones según tus necesidades -->
         </select>
     </div>
@@ -94,10 +94,10 @@
     <div class="inputBox">
         <span>Pregunta de seguridad 2:</span>
         <select id="preguntaSeguridad2" name="preguntaSeguridad2" required="required">
-            <option value="comida">¿Cuál es tu comida favorita?</option>
-            <option value="mejor_amigo">¿Cuál es el nombre de tu mejor amigo de la infancia?</option>
-            <option value="hobby">¿Cuál es tu hobby favorito?</option>
-            <option value="lugar">¿En qué lugar de vacaciones te sentiste más feliz?</option>
+            <option value="¿Cuál es tu comida favorita?">¿Cuál es tu comida favorita?</option>
+            <option value="¿Cuál es el nombre de tu mejor amigo de la infancia?">¿Cuál es el nombre de tu mejor amigo de la infancia?</option>
+            <option value="¿Cuál es tu hobby favorito?">¿Cuál es tu hobby favorito?</option>
+            <option value="¿En qué lugar de vacaciones te sentiste más feliz?">¿En qué lugar de vacaciones te sentiste más feliz?</option>
             <!-- Agrega más opciones según tus necesidades -->
         </select>
     </div>
@@ -121,7 +121,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
     <script src="js/login.js"></script>
-    <script src="js/usuario.js"></script>
+    <script src="js/usuario2.js"></script>
     
 
 </body>

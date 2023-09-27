@@ -4,13 +4,18 @@ include_once "conexion.php";
 
 class mdlUsuario {
 
-    public static function mdlGuardarUsuario($Correo, $Contrasena) {
+    public static function mdlGuardarUsuario($Correo, $Contrasena, $Pregunta1, $Pregunta2, $Respuesta1, $Respuesta2) {
         $GuardarUsuario = "";
-   
+    
         try {
-            $respuestaUsuario = Conexion::conectar()->prepare("INSERT INTO admin(correoElectronico, contraseña) VALUES (:Correo, :Contrasena)");
+            $respuestaUsuario = Conexion::conectar()->prepare("INSERT INTO admin(correoElectronico, contraseña, pregunta1, pregunta2, respuesta1, respuesta2) VALUES (:Correo, :Contrasena, :Pregunta1, :Pregunta2, :Respuesta1, :Respuesta2)");
             $respuestaUsuario->bindParam(":Correo", $Correo);
             $respuestaUsuario->bindParam(":Contrasena", $Contrasena);
+            $respuestaUsuario->bindParam(":Pregunta1", $Pregunta1);
+            $respuestaUsuario->bindParam(":Pregunta2", $Pregunta2);
+            $respuestaUsuario->bindParam(":Respuesta1", $Respuesta1);
+            $respuestaUsuario->bindParam(":Respuesta2", $Respuesta2);
+    
             if ($respuestaUsuario->execute()) {
                 $GuardarUsuario = "ok";
             } else {
@@ -19,9 +24,9 @@ class mdlUsuario {
         } catch (Exception $error) {
             $GuardarUsuario = $error;
         }
+    
         return $GuardarUsuario;
     }
-
 
     
     public static function mdlConsultarPreguntasSeguridad($correo) {
