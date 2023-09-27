@@ -20,7 +20,7 @@ TAREAS LISTAS
 1. Eliminacion de todo los elementos del municipio
 2. ELiminar del documento de municipios(Los datos se almacenaran desde la base de datos)
 3. se ajusta  diseño del login con el nuevo mapa (no mover  se procede hacer recuperacion de contraseña) el login se  ajusta con video 
-
+4. Corregido el error de la base de datos para conexion de login
 
 
 
@@ -61,4 +61,3 @@ INICILAMNTE SE BASARA  LA RECUPERACION DE CONTRASEÑA EN  PREGUNTAS  DE SEGURIDA
 Procesos que hacen falta
 Conexion de login no conecta con la base de datos, login sin funcionamiento(correjir el proceso)
 
-LOGIN FUNCIONA  CORRECTAMENTE  VERIFICAR  LA TABLA  DE ADMIN CON LA  NUEVA ESTRUCTURA  Y VERIFICAR  NOMBRE DE  BASE DE DATOS EN LA CONEXION.PHP 
