@@ -65,3 +65,5 @@ Conexion de login no conecta con la base de datos, login sin funcionamiento(corr
 
 FUNCIONA LOGIN CORRECTAMENTE...?
 
+login no funciona correctamente ya que se realizo guardado de datos en la base de datos y al dijitar los datos a pesar ede que esten correctos me dicen datos erroneos
+
