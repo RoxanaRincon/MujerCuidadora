@@ -87,3 +87,11 @@ verificacion dos pasos no guarda
 IMPORTANTE!
 enviar script de la base de la base de datos para ajustar el mapa que no se visualiza 
 y ternerlo listo antes de las 8 para tener completa esa vista
+
+
+BORRAR BD Y VOLVER ALA A CREAR CON EL SCRIPT DE MUJER.SQL  PARA EVITAR errores
+
+PROBAR DE NUEVO 
+
+
+NO TOCAR EL MAPA VOY AJUSTARLO 
