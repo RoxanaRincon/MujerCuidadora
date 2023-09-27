@@ -58,4 +58,3 @@ INICILAMNTE SE BASARA  LA RECUPERACION DE CONTRASEÑA EN  PREGUNTAS  DE SEGURIDA
 
 
 Correcciones 
-El login no tiene funcionamiento(Realizar reajustes)
