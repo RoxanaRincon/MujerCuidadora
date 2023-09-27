@@ -1,7 +1,7 @@
 /* Personalización de colores */
 :root {
-    --header-height: 3rem;
-    --nav-width: 68px;
+    /* --header-height: 3rem;
+    --nav-width: 68px; */
     --first-color: #7D3B88; /* Naranja */
     --first-color-light: #ffa94d; /* Naranja más claro */
     --white-color: #fff; /* Blanco */
@@ -9,7 +9,7 @@
     --normal-font-size: 1rem;
     --z-fixed: 100;
 }
-
+/* 
 body {
     position: relative;
     margin: var(--header-height) 0 0 0;
@@ -17,7 +17,7 @@ body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     transition: .5s;
-}
+} */
 
 a {
     text-decoration: none;
