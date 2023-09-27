@@ -60,3 +60,5 @@ INICILAMNTE SE BASARA  LA RECUPERACION DE CONTRASEÑA EN  PREGUNTAS  DE SEGURIDA
 
 Procesos que hacen falta
 Conexion de login no conecta con la base de datos, login sin funcionamiento(correjir el proceso)
+
+LOGIN FUNCIONA  CORRECTAMENTE  VERIFICAR  LA TABLA  DE ADMIN CON LA  NUEVA ESTRUCTURA  Y VERIFICAR  NOMBRE DE  BASE DE DATOS EN LA CONEXION.PHP 
