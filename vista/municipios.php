@@ -89,7 +89,7 @@
         </nav>
     </div>
     <!-- Contenido principal -->
-    <div class="main-content">
+    <div class="main-content-responsive">
         <div class="container">
         <div class="row mt-4">
                 <div class="col-md-6 offset-md-3">
