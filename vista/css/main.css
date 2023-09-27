@@ -26,6 +26,15 @@ body {
     align-items: center;
 }
 
+
+#boxRecuperar {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Establece un alto mínimo para el contenedor de registro */
 #boxRegistro {
     min-height: 100vh;
@@ -301,3 +310,44 @@ body {
     position: relative;
     z-index: 1; /* Asegura que el formulario esté en la parte superior */
 }
+
+
+
+/* recuperar */
+
+
+/* ---------------------------------Formualrio REgistro */
+.boxRecuperar{
+    position: relative;
+    background: #1c1c1c;
+    width: 400px;
+    height: 470px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.boxRecuperarform .inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+}
+
+.boxRecuperar form .buttons input[type="button"]{
+    position: relative;
+    padding: 8px 15px;
+    /* border-color: #45f3ff; */
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.boxRecuperar form .buttons input[type="button"]:hover{
+    background: #45f3ff;
+}
+
+.boxRecuperar form .buttons{
+    display: flex;
+    margin: 20px ;
+    justify-content: space-between
+}
+
