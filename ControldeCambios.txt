@@ -67,3 +67,8 @@ FUNCIONA LOGIN CORRECTAMENTE...?
 
 login no funciona correctamente ya que se realizo guardado de datos en la base de datos y al dijitar los datos a pesar ede que esten correctos me dicen datos erroneos
 
+
+proccesos faltantes 
+
+necesito el proceso del mapa para hacerlo dinamico
+
