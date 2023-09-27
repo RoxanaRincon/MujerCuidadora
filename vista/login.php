@@ -24,7 +24,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/mapa.css'>
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     
 
@@ -65,21 +64,53 @@
 
     <div id="boxRegistro" class="boxRegistro" style="display: none;">
     <span class="liner"></span>
-        <form id="formRegistro">
-        <h2>REGISTRARME</h2>
-            <div class="inputBox">
-                <span>Email:</span>
-                <input id="correoregistroid" name="guardarCorreo" type="email" required="required">
-            </div>
-            <div class="inputBox">
-                <span>Contraseña:</span>
-                <input id="contrasenaregistroid" name="guardarContrasena" type="password" required="required">
-            </div>
-            <div class="buttons">
-                <input id="registrar" type="submit" value="REGISTRARME">
-                <input id="ingresarlogin" type="button" value="INGRESAR">
-            </div>
-        </form>
+    <form id="formRegistro">
+    <h2>REGISTRARME</h2>
+    <div class="inputBox">
+        <span>Email:</span>
+        <input id="correoregistroid" name="guardarCorreo" type="email" required="required">
+    </div>
+    <div class="inputBox">
+        <span>Contraseña:</span>
+        <input id="contrasenaregistroid" name="guardarContrasena" type="password" required="required">
+    </div>
+
+    <!-- Agregar campos de selección para preguntas de seguridad -->
+    <div class="inputBox">
+        <span>Pregunta de seguridad 1:</span>
+        <select id="preguntaSeguridad1" name="preguntaSeguridad1" required="required">
+            <option value="color">¿Cuál es tu color favorito?</option>
+            <option value="mascota">¿Cuál es el nombre de tu primera mascota?</option>
+            <option value="ciudad">¿En qué ciudad naciste?</option>
+            <option value="padre">¿Cuál es el nombre de soltera de tu madre?</option>
+            <!-- Agrega más opciones según tus necesidades -->
+        </select>
+    </div>
+    <div class="inputBox">
+        <span>Respuesta 1:</span>
+        <input id="respuestaSeguridad1" name="respuestaSeguridad1" type="text" required="required">
+    </div>
+
+    <div class="inputBox">
+        <span>Pregunta de seguridad 2:</span>
+        <select id="preguntaSeguridad2" name="preguntaSeguridad2" required="required">
+            <option value="comida">¿Cuál es tu comida favorita?</option>
+            <option value="mejor_amigo">¿Cuál es el nombre de tu mejor amigo de la infancia?</option>
+            <option value="hobby">¿Cuál es tu hobby favorito?</option>
+            <option value="lugar">¿En qué lugar de vacaciones te sentiste más feliz?</option>
+            <!-- Agrega más opciones según tus necesidades -->
+        </select>
+    </div>
+    <div class="inputBox">
+        <span>Respuesta 2:</span>
+        <input id="respuestaSeguridad2" name="respuestaSeguridad2" type="text" required="required">
+    </div>
+
+    <div class="buttons">
+        <input id="registrar" type="submit" value="REGISTRARME">
+        <input id="ingresarlogin" type="button" value="INGRESAR">
+    </div>
+</form>
     </div>
 
    
@@ -91,7 +122,7 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
     <script src="js/login.js"></script>
     <script src="js/usuario.js"></script>
-    <script src="js/mapa.js"></script>
+    
 
 </body>
 </html>

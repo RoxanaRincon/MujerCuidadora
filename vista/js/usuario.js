@@ -8,22 +8,31 @@ $(document).ready(function() {
     });
 
    
-    // Manejo del evento submit para el formulario de registro
-    $("#formRegistro").submit(function(event) { 
+      // Manejo del evento submit para el formulario de registro
+      $("#formRegistro").submit(function(event) {
         event.preventDefault();
-        
-        // Obtener el valor seleccionado del campo de tipo de usuario
-        var tipoUsuario = $("select[name=guardartipoUsuario]").val();
 
-        // Crear un objeto con los datos del formulario, incluyendo el tipo de usuario
+        // Obtener las preguntas de seguridad seleccionadas
+        var preguntaSeguridad1 = $("#preguntaSeguridad1").val();
+        var preguntaSeguridad2 = $("#preguntaSeguridad2").val();
+
+        // Obtener las respuestas ingresadas
+        var respuestaSeguridad1 = $("#respuestaSeguridad1").val();
+        var respuestaSeguridad2 = $("#respuestaSeguridad2").val();
+
+        // Crear un objeto con los datos del formulario, incluyendo las preguntas y respuestas
         var formDataRegistro = {
             guardarCorreo: $("#correoregistroid").val(),
             guardarContrasena: $("#contrasenaregistroid").val(),
-            guardartipoUsuario: tipoUsuario  // Agregar el tipo de usuario al objeto
+            preguntaSeguridad1: preguntaSeguridad1,
+            preguntaSeguridad2: preguntaSeguridad2,
+            respuestaSeguridad1: respuestaSeguridad1,
+            respuestaSeguridad2: respuestaSeguridad2
         };
-        
+
         console.log(formDataRegistro);
-        // Realizar la petición AJAX con los datos del formulario
+
+        
         $.ajax({
             url: "../controlador/usuarioControlador.php",
             type: "POST",
@@ -32,18 +41,21 @@ $(document).ready(function() {
         }).done(function (respuesta) {
             console.log(respuesta);
             $("#correoregistroid").val("");
-            $("#contrasenaregistroid").val(""); // Limpiar el campo de contraseña
-
-            alert("Usuario creado satisfactoriamente ");
+            $("#contrasenaregistroid").val("");
+            $("#preguntaSeguridad1").val("");
+            $("#preguntaSeguridad2").val("");
+            $("#respuestaSeguridad1").val("");
+            $("#respuestaSeguridad2").val("");
             
+            alert("Usuario creado satisfactoriamente ");
+
             $("#boxIngreso").show();
             $("#boxRegistro").hide();
         }).fail(function (xhr, status, error) {
-            // Manejar el error en caso de que falle la petición AJAX
+            
             console.log(xhr, status, error);
         });
     });
-
 
 
     $("#preguntas").on("click", function() {
