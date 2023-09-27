@@ -110,3 +110,11 @@ PASOS A SEGUIR
 4 probar funcionalidades de login 
 5 probar mapa 
 6 no tocar nada  termino desarrollo final no mas tiempo trabajo f
+
+
+PREGUNTAS
+
+Compañera ya que el login se encuentra prestando sus servicios puedo editarlo internamenta sin tocar el login?
+
+
+
