@@ -2,18 +2,11 @@ Ingresar mediante el siguiente link
 
 https://www.figma.com/file/SdwcPc0lFeP1b3hzh44Xzo/Untitled?type=design&node-id=0%3A1&mode=design&t=nou84Jar1puGmJrA-1
 
+trabajo dos primeras horas roxana 
 
-TAREAS LISTAS
+implemenmtacion mapa  con manzanas  se utilizara  la vista manzanas.php 
 
-1. Eliminacion de todo los elementos del municipio
-2. ELiminar del documento de municipios(Los datos se almacenaran desde la base de datos)
+trabajo dos horas  maria paula 
 
-
-
-
-
-
-
-
-TAREAS EN PROCESO
-1. crear vista de contactos
+arreglas formularios  de las demas vistas
+agregar los ajax   y las funcionalidades en los respectivos js creados en js
