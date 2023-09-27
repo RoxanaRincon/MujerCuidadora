@@ -7,11 +7,11 @@ class mdlUsuario {
     public static function mdlGuardarUsuario($Correo, $Contrasena) {
         $GuardarUsuario = "";
         // Cifrar antes de guardar en la base de datos
-        $password_cifrado = password_hash($Contrasena, PASSWORD_DEFAULT);
+      //  $password_cifrado = password_hash($Contrasena, PASSWORD_DEFAULT);
         try {
             $respuestaUsuario = Conexion::conectar()->prepare("INSERT INTO admin(correoElectronico, contraseña) VALUES (:Correo, :Contrasena)");
             $respuestaUsuario->bindParam(":Correo", $Correo);
-            $respuestaUsuario->bindParam(":Contrasena", $password_cifrado);
+            $respuestaUsuario->bindParam(":Contrasena", $Contrasena);
             if ($respuestaUsuario->execute()) {
                 $GuardarUsuario = "ok";
             } else {
@@ -29,10 +29,10 @@ class mdlUsuario {
             $consulta->bindParam(":correo", $correo);
             $consulta->execute();
             $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
-            if ($usuario && password_verify($password, $usuario['contraseña'])) {
+            if ($usuario && $password == $usuario['contraseña']) {
                 return $usuario;
             } else {
-                return $usuario;
+                return false;
             }
         } catch (Exception $error) {
             return $error;
