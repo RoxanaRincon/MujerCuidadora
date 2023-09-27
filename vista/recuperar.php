@@ -38,26 +38,22 @@
         Tu navegador no soporta el elemento de video.
     </video>
 </div>
-
-
-    </div>
-
-    <div id="login-container">
+<div id="login-container">
     <!-- Aquí colocamos el formulario de inicio de sesión y registro -->
-    <div id="boxIngreso" class="box" >
+    <div id="boxIngreso" class="box">
         <span class="liner"></span>
         <form id="formLogin">
-            <h1>RECUPERAR CONTRASEÑA </h1>
-            
+            <h1>RECUPERAR CONTRASEÑA</h1>
+
             <div class="inputBox">
                 <span>Usuario:</span>
-                <input id="correoidfrm"  name="correoFrm"  type="email" required="required">
+                <input id="correoidfrm" name="correoFrm" type="email" required="required">
             </div>
             <div class="buttons">
                 <button id="correo" type="submit" disabled class="btn btn-primary">
-                    <span class="bi bi-envelope" ></span> ENVIAR CORREO
+                    <span class="bi bi-envelope"></span> ENVIAR CORREO
                 </button>
-                <button id="preguntas" type="button" class="btn btn-secondary">
+                <button id="preguntas-btn" type="button" class="btn btn-secondary">
                     <span class="bi bi-question"></span> PREGUNTAS DE SEGURIDAD
                 </button>
             </div>
@@ -65,18 +61,39 @@
                 <strong>Atención:</strong> Sistema de correos temporalmente inactivo, por favor utilice la opción "preguntas de seguridad".
             </div>
 
-            <a  href="../vista/login.php" >¿Volver al inicio?</a>
+            <a href="../vista/login.php">¿Volver al inicio?</a>
+        </form>
+
+        <!-- Div para mostrar las preguntas de seguridad -->
+        <div id="preguntas-seguridad" style="display: none;">
+            <form id="formPreguntas">
+                <h2>Preguntas de Seguridad</h2>
+
+                <div class="inputBox">
+                    <span id="pregunta1Texto" ></span>
+                    <input id="respuesta1" name="respuesta1" type="text" placeholder="Respuesta 1" required>
+                </div>
+
+                <div class="inputBox">
+                    <span  id="pregunta2Texto"></span>
+                    <input id="respuesta2" name="respuesta2" type="text" placeholder="Respuesta 2" required>
+                </div>
+
+                <br>
+                <!-- Validador de preguntas -->
+                <button id="validar-preguntas" type="button" class="btn btn-success">Validar Preguntas</button>
+            
+                <a href="../vista/login.php">¿Volver al inicio?</a>
+            </form>
+        </div>
     </div>
 </div>
 
 
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/usuario.js"></script>
-    <script src="js/mapa.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script> 
+    <script src="js/recuperar.js"></script>
+   
 
 </body>
 </html>

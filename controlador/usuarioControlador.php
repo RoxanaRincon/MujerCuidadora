@@ -9,6 +9,10 @@ class ctrUsuario {
         echo json_encode($respuestaUsuarioM);
     }
 
+
+
+    
+
     public function ctrIniciarSesion($correo, $contrasena) {
         $usuario = mdlUsuario::mdlIniciarSesion($correo, $contrasena);
     
@@ -20,6 +24,23 @@ class ctrUsuario {
         } else {
             echo json_encode($usuario);
         }
+    }
+
+    public function ctrValidarRespuestas($correo, $respuesta1, $respuesta2) {
+        $validacion = mdlUsuario::mdlValidarRespuestas($correo, $respuesta1, $respuesta2);
+        if ($validacion) {
+            // Las respuestas son correctas, puedes redirigir al usuario o realizar alguna acción adicional
+            echo json_encode(["mensaje" => "Respuestas correctas"]);
+        } else {
+            // Las respuestas son incorrectas
+            echo json_encode(["mensaje" => "Respuestas incorrectas"]);
+        }
+    }
+
+
+    public function ctrConsultarPreguntasSeguridad($correo) {
+        $preguntas = mdlUsuario::mdlConsultarPreguntasSeguridad($correo);
+        echo json_encode($preguntas);
     }
 }
 
@@ -34,4 +55,23 @@ if (isset($_POST["guardarCorreo"], $_POST["guardarContrasena"])) {
     $objUsuario = new ctrUsuario();
     $objUsuario->ctrGuardarUsuario($_POST["guardarCorreo"], $_POST["guardarContrasena"]);
 }
+
+if (isset($_POST["action"]) && $_POST["action"] === "consultarPreguntas") {
+    if (isset($_POST["correo"])) {
+        $objUsuario = new ctrUsuario();
+        $objUsuario->ctrConsultarPreguntasSeguridad($_POST["correo"]);
+    } else {
+        echo json_encode(["pregunta1" => "", "pregunta2" => ""]);
+    }
+}
+
+if (isset($_POST["action"]) && $_POST["action"] === "validarRespuestas") {
+    if (isset($_POST["correo"], $_POST["respuesta1"], $_POST["respuesta2"])) {
+        $objUsuario = new ctrUsuario();
+        $objUsuario->ctrValidarRespuestas($_POST["correo"], $_POST["respuesta1"], $_POST["respuesta2"]);
+    } else {
+        echo json_encode(["mensaje" => "Faltan datos"]);
+    }
+}
+
 ?>

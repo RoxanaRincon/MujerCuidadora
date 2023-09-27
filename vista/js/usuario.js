@@ -43,4 +43,26 @@ $(document).ready(function() {
             console.log(xhr, status, error);
         });
     });
+
+
+
+    $("#preguntas").on("click", function() {
+        var correo = $("#correoidfrm").val();
+
+        $.ajax({
+            url: "../controlador/usuarioControlador.php",
+            method: "POST",
+            data: { correo: correo, action: "consultarPreguntas" },
+            dataType: "json",
+            success: function(response) {
+                $("#pregunta1").val(response.pregunta1);
+                $("#pregunta2").val(response.pregunta2);
+                $("#preguntas-seguridad").fadeIn(1000);
+            },
+            error: function(xhr, status, error) {
+                console.log(xhr, status, error);
+                alert("Error al obtener las preguntas de seguridad.");
+            }
+        });
+    });
 });
