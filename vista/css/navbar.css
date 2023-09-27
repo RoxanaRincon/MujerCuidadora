@@ -9,7 +9,7 @@
     --normal-font-size: 1rem;
     --z-fixed: 100;
 }
-/* 
+
 body {
     position: relative;
     margin: var(--header-height) 0 0 0;
@@ -17,7 +17,7 @@ body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     transition: .5s;
-} */
+}
 
 a {
     text-decoration: none;
