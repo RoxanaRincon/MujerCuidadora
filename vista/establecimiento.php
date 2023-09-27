@@ -6,9 +6,12 @@
     <title>SENA - Control de Competencias</title>
     <!-- Enlaces CDN de Bootstrap, jQuery y Boxicons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -89,25 +92,26 @@
         </nav>
     </div>
     <!-- Contenido principal -->
-    <div class="main-content">
-        <div class="container">
+    <div class="container-fluid">
+        <div class="container mt-3">
        
-        <h1 class="text-center">Gestión de Establecimientos</h1>
-        <button class="btn btn-primary mb-3" id="addButton">Agregar Establecimiento</button>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Código</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Responsable</th>
-                    <th scope="col">Dirección</th>
-                    <th scope="col">Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="tableBody">
-                <!-- Aquí se mostrarán los datos de la tabla -->
-            </tbody>
-        </table>
+            <h1 class="text-center">Gestión de Establecimientos</h1>
+            <button class="btn btn-primary mb-3" id="addButton">Agregar Establecimiento</button>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Responsable</th>
+                            <th scope="col">Dirección</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Aquí se mostrarán los datos de la tabla -->
+                    </tbody>
+                </table>
+        
 
         <!-- Formulario de Registro de Establecimiento (inicialmente oculto) -->
         <div id="registrationForm" style="display: none;">
