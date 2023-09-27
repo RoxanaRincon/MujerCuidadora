@@ -15,10 +15,10 @@ class ctrUsuario {
         if ($usuario) {
             session_start();
             $_SESSION['loggedin'] = true;
-            $_SESSION['idUsuario'] = $usuario['idAdmin']; // Ajusta el nombre de la columna de ID según tu estructura
+            $_SESSION['idAdmin'] = $usuario['idAdmin']; // Ajusta el nombre de la columna de ID según tu estructura
             echo json_encode($usuario);
         } else {
-            echo json_encode("Usuario o contraseña incorrectos");
+            echo json_encode($usuario);
         }
     }
 }

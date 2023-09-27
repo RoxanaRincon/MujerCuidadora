@@ -29,14 +29,13 @@ class mdlUsuario {
             $consulta->bindParam(":correo", $correo);
             $consulta->execute();
             $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
-
             if ($usuario && password_verify($password, $usuario['contraseña'])) {
                 return $usuario;
             } else {
-                return false;
+                return $usuario;
             }
         } catch (Exception $error) {
-            return false;
+            return $error;
         }
     }
 }

@@ -24,6 +24,7 @@ $(document).ready(function() {
             data: formData,
             dataType: "json",
             success: function(response) {
+                
                 if (response.idAdmin) {
                     console.log(response.idAdmin);
                     window.location.href = "../vista/manzanas.php";
