@@ -42,7 +42,7 @@ IMPORTANTE
 
 SE DECIDE  UTILIZAR  Y TRABAJAR CON LA VERSION  DE BASE DE DATOS MUJER.SQL ???
 
-
+scriptsactualizacionmapa.sql se añade archivo apra ocntrol de cmabios en bd scripts ejecutables 
 
 
 PENDIENTES
