@@ -29,11 +29,10 @@ class ctrUsuario {
     public function ctrValidarRespuestas($correo, $respuesta1, $respuesta2) {
         $validacion = mdlUsuario::mdlValidarRespuestas($correo, $respuesta1, $respuesta2);
         if ($validacion) {
-            // Las respuestas son correctas, puedes redirigir al usuario o realizar alguna acción adicional
-            echo json_encode(["mensaje" => "Respuestas correctas"]);
+            
+            echo json_encode(["mensaje" => "true"]);
         } else {
-            // Las respuestas son incorrectas
-            echo json_encode(["mensaje" => "Respuestas incorrectas"]);
+            echo json_encode(["mensaje" => "false"]);
         }
     }
 

@@ -64,7 +64,7 @@ class mdlUsuario {
             }
             return false; 
         } catch (Exception $error) {
-            return false; 
+            return $error; 
         }
     }
 
