@@ -95,3 +95,6 @@ PROBAR DE NUEVO
 
 
 NO TOCAR EL MAPA VOY AJUSTARLO 
+
+IMPORTANTE
+compañera necesito ajustar el diseño del login 
