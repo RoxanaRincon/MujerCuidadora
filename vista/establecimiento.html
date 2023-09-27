@@ -19,7 +19,7 @@
     
 </head>
 <body id="body-pd">
-    <header class="header" id="header">
+    <header style="position: relative;" class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
     
         <nav class="navbar navbar-expand-lg navbar-light">

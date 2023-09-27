@@ -90,7 +90,7 @@
         </nav>
     </div>
     <!-- Contenido principal -->
-    <br><br><br><br>
+    <br>
     <button>Button</button>
     <div class="main-content">
     <div class="container">
