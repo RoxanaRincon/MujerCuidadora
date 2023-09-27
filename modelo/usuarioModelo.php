@@ -9,7 +9,7 @@ class mdlUsuario {
         // Cifrar antes de guardar en la base de datos
         $password_cifrado = password_hash($Contrasena, PASSWORD_DEFAULT);
         try {
-            $respuestaUsuario = conexion::conectar()->prepare("INSERT INTO usuarios(correo, contrasena, id_rol) VALUES (:Correo, :Contrasena, 1)");
+            $respuestaUsuario = Conexion::conectar()->prepare("INSERT INTO admin(correoElectronico, contraseña) VALUES (:Correo, :Contrasena)");
             $respuestaUsuario->bindParam(":Correo", $Correo);
             $respuestaUsuario->bindParam(":Contrasena", $password_cifrado);
             if ($respuestaUsuario->execute()) {
@@ -25,12 +25,12 @@ class mdlUsuario {
 
     public static function mdlIniciarSesion($correo, $password) {
         try {
-            $consulta = Conexion::conectar()->prepare("SELECT * FROM usuarios WHERE correo = :correo");
+            $consulta = Conexion::conectar()->prepare("SELECT * FROM admin WHERE correoElectronico = :correo");
             $consulta->bindParam(":correo", $correo);
             $consulta->execute();
             $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
 
-            if ($usuario && password_verify($password, $usuario['contrasena'])) {
+            if ($usuario && password_verify($password, $usuario['contraseña'])) {
                 return $usuario;
             } else {
                 return false;
@@ -39,8 +39,5 @@ class mdlUsuario {
             return false;
         }
     }
-
-
-
-   
 }
+?>

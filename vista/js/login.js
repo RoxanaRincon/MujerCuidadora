@@ -14,9 +14,7 @@ $(document).ready(function() {
         $("#contrasenaregistroid").val(""); // Limpiar el campo de contraseña
     });
 
-
-$("#formLogin").submit(function(event) {
-    debugger;
+    $("#formLogin").submit(function(event) {
         event.preventDefault();
         var formData = $(this).serialize();
         console.log(formData);
@@ -26,10 +24,9 @@ $("#formLogin").submit(function(event) {
             data: formData,
             dataType: "json",
             success: function(response) {
-                if (response.hasOwnProperty('id_rol')) {
-                    console.log(response.id_rol);
-                    // Redireccionar al dashboard según el tipo de usuario
-                    window.location.href = determineDashboard(response.id_rol);
+                if (response.idAdmin) {
+                    console.log(response.idAdmin);
+                    window.location.href = "../vista/manzanas.php";
                 } else {
                     alert("Usuario o contraseña incorrectos");
                 }
@@ -40,23 +37,4 @@ $("#formLogin").submit(function(event) {
             }
         });
     });
-
-    function determineDashboard(tipoUsuario) {
-        switch (tipoUsuario) {
-            case 1:
-                return "../vista/usuario.php";
-            case 2:
-                return "../vista/establecimiento.php";
-            case 3:
-                return "../vista/manzanas.php";
-            case 4:
-                return "../vista/mujercuidadora.php";
-            default:
-                return "../vista/index.php"; // Página predeterminada en caso de rol desconocido
-        }
-    }
-
-
-
-    
 });
