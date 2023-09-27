@@ -33,4 +33,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     linkColor.forEach(l => l.addEventListener('click', colorLink))
+
+
+    $("#btnPregunta").on("click", function(){
+        $("#contenidoPricipal").hide();
+        $("#quienesSomos").fadeIn(1000);
+    })
+
+    $("#home").on("click", function(){
+        $("#quienesSomos").hide();
+        $("#contenidoPricipal").fadeIn(1000);
+    })
 });
