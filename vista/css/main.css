@@ -65,7 +65,10 @@ body {
 
 
 
+
 /* --------------------- Forulario Ingreso */
+
+
 .box{
     position: relative;
     background: white;
@@ -126,6 +129,18 @@ body {
     z-index: 1;
     animation: animate 6s linear infinite;
     animation-delay: -1.5s;
+}
+
+
+/* Estilo personalizado para el enlace de recuperación de contraseña */
+.forgot-password a {
+    color: white; /* Cambia el color del texto a blanco */
+    text-decoration: none; /* Elimina la subraya por defecto de los enlaces */
+    font-weight: bold; /* Hace que el texto sea más visible */
+}
+
+.forgot-password a:hover {
+    text-decoration: underline; /* Agrega subrayado al pasar el ratón por encima */
 }
 
 
@@ -315,39 +330,4 @@ body {
 
 /* recuperar */
 
-
-/* ---------------------------------Formualrio REgistro */
-.boxRecuperar{
-    position: relative;
-    background: #1c1c1c;
-    width: 400px;
-    height: 470px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.boxRecuperarform .inputBox{
-    position: relative;
-    width: 300px;
-    margin-top: 30px;
-}
-
-.boxRecuperar form .buttons input[type="button"]{
-    position: relative;
-    padding: 8px 15px;
-    /* border-color: #45f3ff; */
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
-}
-
-.boxRecuperar form .buttons input[type="button"]:hover{
-    background: #45f3ff;
-}
-
-.boxRecuperar form .buttons{
-    display: flex;
-    margin: 20px ;
-    justify-content: space-between
-}
 

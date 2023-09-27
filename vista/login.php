@@ -58,7 +58,9 @@
             <div class="buttons">
                 <input id="ingresar" type="submit" value="INGRESAR">
                 <input id="registro" type="button" value="REGISTRAR">
+                
             </div>
+            <a  href="../vista/recuperar.php" >¿Olvidaste tu contraseña?</a>
         </form>
     </div>
 
@@ -80,6 +82,8 @@
             </div>
         </form>
     </div>
+
+   
  </div>
 
 
