@@ -83,5 +83,7 @@ correciones
 diseño login alargado
 aun sin registrar datos 
 verificacion dos pasos no guarda
-enviar script de la base de la base de datos 
-el mapa no se visualiza 
+
+IMPORTANTE!
+enviar script de la base de la base de datos para ajustar el mapa que no se visualiza 
+y ternerlo listo antes de las 8 para tener completa esa vista
