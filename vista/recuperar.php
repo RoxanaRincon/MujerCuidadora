@@ -62,6 +62,8 @@
             <div class="alert alert-danger" role="alert">
                 <strong>Atención:</strong> Sistema de correos temporalmente inactivo, por favor utilice la opción "preguntas de seguridad".
             </div>
+
+            <a  href="../vista/login.php" >¿Volver al inicio?</a>
     </div>
 </div>
 
