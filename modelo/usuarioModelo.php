@@ -23,6 +23,16 @@ class mdlUsuario {
         return $GuardarUsuario;
     }
 
+
+    
+    public static function mdlConsultarPreguntasSeguridad($correo) {
+        $stmt = Conexion::conectar()->prepare("SELECT pregunta1, pregunta2 FROM admin WHERE correoElectronico = :correo");
+        $stmt->bindParam(":correo", $correo, PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    
+
     public static function mdlIniciarSesion($correo, $password) {
         try {
             $consulta = Conexion::conectar()->prepare("SELECT * FROM admin WHERE correoElectronico = :correo");

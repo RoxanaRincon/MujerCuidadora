@@ -327,7 +327,21 @@ body {
 }
 
 
+#video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca el video detrás de otros elementos */
+    overflow: hidden; /* Asegura que el video no se desborde */
+}
 
+video {
+    object-fit: cover; /* Cubre todo el contenedor con el video */
+    width: 100%;
+    height: 100%;
+}
 /* recuperar */
 
 

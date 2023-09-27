@@ -31,12 +31,14 @@
 
 </head>
 <body>
-   <div id="map-container">
-        <!-- Aquí colocamos el mapa -->
-        <div id="map">
-
-
+<div id="video-container">
+    <!-- Aquí colocamos el video -->
+    <video autoplay loop muted playsinline>
+        <source src="../vista/imagenes/videologin.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
 </div>
+
 
     </div>
 
