@@ -32,7 +32,7 @@ TAREAS EN PROCESO
 Primeras horas paula
 1. Edicion de la vista de contacto
 2. link para el footer btn youtube (https://www.youtube.com/watch?v=6ryKga2KBJ8)
-
+3. footer mockup
 
 
 IMPORTANTE 
@@ -42,4 +42,3 @@ SE DECIDE  UTILIZAR  Y TRABAJAR CON LA VERSION  DE BASE DE DATOS MUJER.SQL ???
 
 
 
--------------------------------------------------------------------
