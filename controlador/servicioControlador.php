@@ -29,6 +29,11 @@ class servicio{
         $respuestaServicio = mdlServicio::mdlGuardarServicio($codigo, $nombre, $descripcion, $categoria, $tipoServicio);
         echo json_encode($respuestaServicio);
     }
+
+    public function ctrEliminarServicio($idServicio) {
+        $respuestaEliminar = mdlServicio::mdlEliminarServicio($idServicio);
+        echo json_encode($respuestaEliminar);
+    }
 }
 
 
@@ -56,4 +61,11 @@ if (isset($_POST["guardarCodigo"], $_POST["guardarNombre"], $_POST["guardarDescr
     $tipoServicio = $_POST["guardarTipoServicio"];
     
     $objServicio->ctrGuardarServicio($codigo, $nombre, $descripcion, $categoria, $tipoServicio);
+}
+
+if (isset($_POST["eliminarServicio"], $_POST["idServicio"])) {
+    $objServicio = new servicio();
+    $idServicio = $_POST["idServicio"];
+    
+    $objServicio->ctrEliminarServicio($idServicio);
 }

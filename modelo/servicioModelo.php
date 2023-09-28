@@ -90,5 +90,28 @@ class mdlServicio{
         }
     }
 
+
+
+    public static function mdlEliminarServicio($idServicio) {
+        try {
+            // Preparar la sentencia SQL DELETE
+            $stmt = Conexion::conectar()->prepare("DELETE FROM servicio WHERE idServicio = :idServicio");
+    
+            // Bind del parámetro
+            $stmt->bindParam(':idServicio', $idServicio, PDO::PARAM_INT);
+    
+            // Ejecutar la sentencia SQL
+            if ($stmt->execute()) {
+                // Éxito: Devolver un mensaje de éxito
+                return ["success" => true];
+            } else {
+                // Error: Devolver un mensaje de error
+                return ["success" => false, "mensaje" => "Error al eliminar el servicio"];
+            }
+        } catch (Exception $e) {
+            // Manejar cualquier excepción que ocurra
+            return ["success" => false, "mensaje" => "Error: " . $e->getMessage()];
+        }
+    }
 }
 
