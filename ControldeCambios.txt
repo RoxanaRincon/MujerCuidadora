@@ -117,3 +117,4 @@
 	-Se arregla  registrar servicios lucky
 	-CIERRO DESARROLLO  NO + TERMINAR LO QUE FALTE  
 	-TAREA DE LIMPIAR ARCHIVOS NO NECESARIOS.... NO OLVIDAR COONTROL DE CAMBIOS PARA PRESENTACION (OK)
+    -Antes de las 10:30 matener la mayoria de archivos listos para exposicion
