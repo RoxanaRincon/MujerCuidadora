@@ -44,8 +44,8 @@
 
 *PENDIENTES
 
-    1.Se implementa mapa con algunos ejemplos, falta conectar con bd.
-    2.FUNCION RECUPERAR CONTRASEÑA.
+    1.Se implementa mapa con algunos ejemplos, falta conectar con bd.(OK)
+    2.FUNCION RECUPERAR CONTRASEÑA. (OK)
     3.Conexion de login no conecta con la base de datos, login sin funcionamiento(correjir el proceso). (OK)
 
 *NOTA
@@ -114,7 +114,10 @@
 
 *NOTA
 	-Por favor deja tu lista de archivos que estaras utilizando para no presentar conflictos en el git
-	-Se arregla  registrar servicios lucky
+	-Se arregla  registrar servicios (OK)
 	-CIERRO DESARROLLO  NO + TERMINAR LO QUE FALTE  
 	-TAREA DE LIMPIAR ARCHIVOS NO NECESARIOS.... NO OLVIDAR COONTROL DE CAMBIOS PARA PRESENTACION (OK)
-    -Antes de las 10:30 matener la mayoria de archivos listos para exposicion
+    -Antes de las 10:30 matener la mayoria de archivos listos para exposicion.
+
+
+*URGENTE BOTONES ELIMINAR Y EDITAR DE LA TABLA SERVICIOS
