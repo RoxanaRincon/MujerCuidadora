@@ -10,16 +10,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
    
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <script src="js/mapa.js"></script>
     
 </head>
 <body id="body-pd">
-    <header style="position: relative;" class="header" id="header">
+    <header style="position: relative; height:60px" class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
     
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -96,12 +100,14 @@
         <button type="button" class="btn btn-primary mb-3" id="agregarServicio">Agregar Servicio</button>
 
         <!-- Tabla para mostrar la lista de servicios -->
-        <table class="table table-bordered">
+        <table id="tablaServicios" class="table table-bordered">
             <thead>
                 <tr>
                     <th>Código</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
+                    <th>Tipo Categoria</th>
+                    <th>Categoria</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -111,6 +117,8 @@
             </tbody>
         </table>
     </div>
+
+    
 
     <!-- Modal para agregar/editar servicio -->
     <div class="modal fade" id="servicioModal" tabindex="-1" role="dialog" aria-labelledby="servicioModalLabel" aria-hidden="true">
@@ -149,13 +157,7 @@
     </div>
     
     </div>
-    <!-- Pie de página -->
-    <footer class="footer text-center">
-        <div class="container">
-        <img src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/07/cuidamos-a-las-que-nos-cuidan.svg" alt="Texto alternativo de la imagen">
-  © 2023 SENA
-        </div>
-    </footer>
+    <script src="./js/servicio.js"></script>
     <script src="js/main.js"></script>
 
     
