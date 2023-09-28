@@ -10,15 +10,18 @@
 >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
    
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <script src="js/mapa.js"></script>
+    <!-- <script src="js/mapa.js"></script> -->
     
 </head>
 <body id="body-pd">
@@ -97,7 +100,7 @@
        
             <h1 class="text-center">Gestión de Establecimientos</h1>
             <button class="btn btn-primary mb-3" id="addButton">Agregar Establecimiento</button>
-                <table class="table">
+                <table id="tablaEstablecimiento" class="table">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">Código</th>
@@ -139,16 +142,7 @@
         </div>
     </div>
 
-    <!-- Pie de página -->
-    <footer class="footer text-center">
-
-    <div class="container">
-    
-
-        <img src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/07/cuidamos-a-las-que-nos-cuidan.svg" alt="Texto alternativo de la imagen">
-            © 2023 SENA
-        </div>
-    </footer>
+    <script src="./js/establecimiento.js"></script>
     <script src="js/main.js"></script>
     <script>
         // Función para mostrar u ocultar el formulario de registro usando jQuery
