@@ -19,7 +19,7 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
    
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <script src="js/mapa.js"></script>
+    <!-- <script src="js/mapa.js"></script> -->
     
 </head>
 <body id="body-pd">
@@ -97,7 +97,7 @@
         <div class="container">
         <h1 class="text-center">Gestión de Servicios</h1>
         <!-- Botón para agregar un nuevo servicio -->
-        <button type="button" class="btn btn-primary mb-3" id="agregarServicio">Agregar Servicio</button>
+        <button type="button" data-toggle="modal" data-target="#servicioModal" class="btn btn-primary mb-3" id="agregarServicio">Agregar Servicio</button>
 
         <!-- Tabla para mostrar la lista de servicios -->
         <table id="tablaServicios" class="table table-bordered">
@@ -136,21 +136,33 @@
                         <input type="hidden" id="ServicioID" name="ServicioID" value="0">
                         <div class="form-group">
                             <label for="Codigo">Código:</label>
-                            <input type="text" class="form-control" id="Codigo" name="Codigo" required>
+                            <input type="text" class="form-control" id="codigo" name="codigo" required>
                         </div>
                         <div class="form-group">
                             <label for="Nombre">Nombre:</label>
-                            <input type="text" class="form-control" id="Nombre" name="Nombre" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
                         </div>
                         <div class="form-group">
                             <label for="Descripcion">Descripción:</label>
-                            <textarea class="form-control" id="Descripcion" name="Descripcion"></textarea>
+                            <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="Descripcion">Categoria:</label>
+                            <select class="form-select" name="sltCategoria" id="sltCategoria">
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Descripcion">Tipo Servicio:</label>
+                            <select class="form-select" name="sltTipoServicio" id="sltTipoServicio">
+
+                            </select>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="guardarServicio">Guardar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="guardarServicio">Guardar</button>
                 </div>
             </div>
         </div>
@@ -158,7 +170,7 @@
     
     </div>
     <script src="./js/servicio.js"></script>
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 
     
 </body>

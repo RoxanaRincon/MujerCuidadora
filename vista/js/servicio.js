@@ -1,7 +1,9 @@
 $(function(){
 
     tabla = null
-    listarServicio()
+    listarServicio();
+    listarSelectCategorias();
+    listarSelectTipoServicio();
     function listarServicio(){
         var objData = new FormData();
         objData.append("listarServicios", "ok");
@@ -37,4 +39,82 @@ $(function(){
         })
         tabla = true;
     }
+
+
+    function listarSelectCategorias(){
+        var objData = new FormData();
+        objData.append("listarCategorias", "ok");
+        $.ajax({
+            url: "../controlador/servicioControlador.php",
+            type: "post",
+            dataType: "json",
+            data: objData,
+            cache: false,
+            contentType: false,
+            processData: false
+        }).done(function (respuesta) {
+            opciones = '';
+            respuesta.forEach(listarSelectCategorias);
+            function listarSelectCategorias(item,index){
+                opciones += '<option value="' + item.idCategoria + '">' + item.categoria + '</option>';
+
+            }
+            $("#sltCategoria").html(opciones);
+        })
+    }
+
+
+    function listarSelectTipoServicio(){
+        var objData = new FormData();
+        objData.append("listarTipoServicio", "ok");
+        $.ajax({
+            url: "../controlador/servicioControlador.php",
+            type: "post",
+            dataType: "json",
+            data: objData,
+            cache: false,
+            contentType: false,
+            processData: false
+        }).done(function (respuesta) {
+            opciones = '';
+            respuesta.forEach(listarSelectTipoServicio);
+            function listarSelectTipoServicio(item,index){
+                opciones += '<option value="' + item.idTipoUsuario + '">' + item.tipoServicio + '</option>';
+
+            }
+            $("#sltTipoServicio").html(opciones);
+        })
+    }
+
+    $("#guardarServicio").on("click", function(){
+        var codigo = $("#codigo").val();
+        var nombre = $("#nombre").val();
+        var descripcion = $("#descripcion").val();
+        var idCategoria = $("#sltCategoria").val();
+        var idTipoServicio = $("#sltTipoServicio").val();
+
+        var objData = new FormData();
+        objData.append("guardarCodigo", codigo);
+        objData.append("guardarNombre", nombre);
+        objData.append("guardarDescripcion", descripcion);
+        objData.append("guardarIdCategoria", idCategoria);
+        objData.append("guardarIdTipoServicio", idTipoServicio);
+
+        $.ajax({
+            url: "../controlador/servicioControlador.php",
+            type: "post",
+            dataType: "json",
+            data: objData,
+            cache: false,
+            contentType: false,
+            processData: false
+        }).done(function (respuesta) {
+            console.log(respuesta)
+        })
+        
+    })
+
+
+    
+
 })

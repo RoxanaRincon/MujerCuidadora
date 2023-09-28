@@ -15,5 +15,8 @@ class mdlEstablecimiento{
         }
         return $listarEstablecimiento;
     }
+
+
+    
 }
 
