@@ -29,7 +29,7 @@ class mdlServicio{
         return $listarCategoria;
     }
 
-    public static function mdlListarTipoServicios(){
+    public static function mdlListarTipoServicio(){
         $listarTipoServicio = "";
         try {
             $objRespuesta = Conexion::conectar()->prepare("SELECT * FROM tiposervicio");
@@ -42,31 +42,26 @@ class mdlServicio{
         return $listarTipoServicio;
     }
 
-
-    public static function mdlGuardarServicio($codigo, $nombre, $descripcion, $categoria, $tipoServicio) {
-        try {
-            // Preparar la sentencia SQL INSERT
-            $stmt = Conexion::conectar()->prepare("INSERT INTO servicio(codigo, nombre, descripcion, IdCategoria, IdTipoServicio) VALUES (:codigo, :nombre, :descripcion, :categoria, :tipoServicio)");
-    
-            // Bind de los parámetros
-            $stmt->bindParam(':codigo', $codigo, PDO::PARAM_INT);
-            $stmt->bindParam(':nombre', $nombre, PDO::PARAM_STR);
-            $stmt->bindParam(':descripcion', $descripcion, PDO::PARAM_STR);
-            $stmt->bindParam(':categoria', $categoria, PDO::PARAM_INT);
-            $stmt->bindParam(':tipoServicio', $tipoServicio, PDO::PARAM_INT);
-    
-            // Ejecutar la sentencia SQL
-            if ($stmt->execute()) {
-                // Éxito: Devolver un mensaje de éxito
-                return ["mensaje" => "ok"];
-            } else {
-                // Error: Devolver un mensaje de error
-                return ["mensaje" => "Error al guardar el servicio"];
+    public static function mdlListarServicio($codigo,$nombre,$descripcion,$idCategoria,$idTipoServicio){
+        $mensaje = "";
+        try{
+            $objRespuesta = Conexion::conectar()->prepare("INSERT INTO servicio(codigo,nombre,descripcion,IdCategoria,IdTipoServicio) VALUES(:codigo,:nombre,:descripcion,:IdCategoria,:IdTipoServicio)");
+            $objRespuesta->bindparam(":codigo", $codigo);
+            $objRespuesta->bindparam(":nombre", $nombre);
+            $objRespuesta->bindparam(":descripcion", $descripcion);
+            $objRespuesta->bindparam(":IdCategoria", $idCategoria);
+            $objRespuesta->bindparam(":IdTipoServicio", $idTipoServicio);
+            if($objRespuesta->execute()){
+                $mensaje = "ok";
+            }else{
+                $mensaje = "Error al insertar el servicio";
             }
-        } catch (Exception $e) {
-            // Manejar cualquier excepción que ocurra
-            return ["mensaje" => "Error: " . $e->getMessage()];
+
+        }catch(Exception $e){
+            $mensaje = $e;
         }
+        return $mensaje;
     }
+
 }
 
