@@ -19,7 +19,8 @@ body {
 
 /* Establece un alto mínimo para el contenedor del formulario de inicio de sesión */
 #boxIngreso {
-    min-height: 100vh;
+    margin-left: 200px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,7 +164,7 @@ body {
 .boxRegistro form,
 .box form{
     position: absolute;
-    background: #090909;
+    background: white;
     inset: 4px;
     padding: 30px 40px;
     z-index: 2;
@@ -175,15 +176,16 @@ body {
 .boxRegistro form h2 ,
 .box form h2{
     font-weight: 500;
-    color: white;
+    color: black;
     text-align: center;
+    font-weight: bold;
     letter-spacing: 0.1em;
 }
 
 .boxRegistro form h1 ,
 .box form h1{
     font-weight: 500;
-    color: white;
+    color: black;
     text-align: center;
     letter-spacing: 0.1em;
 }
@@ -199,18 +201,18 @@ body {
 .box form .inputBox input{
     position: relative;
     width: 100%;
-    padding: 15px 10px 10px;
+    padding: 8px 4px 4px;
     font-size: 1em;
     letter-spacing: 0.05em;
     box-shadow: none;
     outline: none;
-    border: none;
     border-radius: 4px;
 }
 
 .boxRegistro form .inputBox span,
 .box form .inputBox span{
-    color: white;
+    color: black;
+    font-weight: bold;
     font-size: 1em;
     letter-spacing: 0.1em;
 }
@@ -225,19 +227,16 @@ body {
 .box form .buttons input[type="submit"]{
     position: relative;
     padding: 8px 15px;
-    /* border-color: #ff2770; */
+    background: #B597FA;
     border: none;
     border-radius: 8px;
     font-size: 1em;
 }
 
-.box form .buttons input[type="submit"]:hover{
-    background: #ff2770;
-
-}
 
 .box form .buttons input[type="button"]{
     position: relative;
+    background: #A3FAC0;
     padding: 8px 15px;
     /* border-color: #45f3ff; */
     border: none;
@@ -245,9 +244,6 @@ body {
     font-size: 1em;
 }
 
-.box form .buttons input[type="button"]:hover{
-    background: #45f3ff;
-}
 
 
 /* ---------------------------------Formualrio REgistro */
