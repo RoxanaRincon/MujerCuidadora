@@ -1,5 +1,6 @@
 $(function () {
     tabla = null;
+    var servicioID = 0; 
     listarServicio();
     listarCategorias();
     listarTipoServicio();
@@ -22,8 +23,8 @@ $(function () {
 
             function listarServicios(item, index) {
                 botonAcciones = '<button class="btn btn-danger btn-eliminar" data-id="' + item.idServicio + '"><i class="bi bi-trash3"></i></button>';
-                botonAcciones += '<button class="btn btn-primary btn-editar" data-id="' + item.idServicio + '" data-codigo="' + item.codigo + '" data-nombre="' + item.nombre + '" data-descripcion="' + item.descripcion + '" data-idCategoria="' + item.idCategoria + '" data-idTipoServicio="' + item.idTipoServicio + '"><i class="bi bi-pencil-square"></i></button>';
-                dataSet.push([item.codigo, item.nombre, item.descripcion, item.idCategoria, item.IdTipoServicio, botonAcciones]);
+                botonAcciones += '<button class="btn btn-primary btn-editar" data-id="' + item.idServicio + '" data-codigo="' + item.codigo + '" data-nombre="' + item.nombre + '" data-descripcion="' + item.descripcion + '" data-idCategoria="' + item.nombreCategoria + '" data-idTipoServicio="' + item.nombreTipoServicio + '"><i class="bi bi-pencil-square"></i></button>';
+                dataSet.push([item.codigo, item.nombre, item.descripcion, item.nombreCategoria, item.nombreTipoServicio, botonAcciones]);
             }
 
             actualizarTabla(dataSet);
@@ -116,13 +117,21 @@ $(function () {
         var descripcion = $("#Descripcion").val();
         var categoria = $("#sltCategoria").val();
         var tipoServicio = $("#sltTipoServicio").val();
-
+    
         var objData = new FormData();
-        objData.append("guardarCodigo", codigo);
-        objData.append("guardarNombre", nombre);
-        objData.append("guardarDescripcion", descripcion);
-        objData.append("guardarCategoria", categoria);
-        objData.append("guardarTipoServicio", tipoServicio);
+    
+        if (servicioID !== 0) {
+            // En modo de edición, agrega el ID del servicio y el indicador para actualizar
+            objData.append("editarServicio", "ok");
+            objData.append("servicioID", servicioID);
+        } else {
+            // En modo de agregar, agrega el indicador para guardar un nuevo servicio
+            objData.append("guardarCodigo", codigo);
+            objData.append("guardarNombre", nombre);
+            objData.append("guardarDescripcion", descripcion);
+            objData.append("guardarCategoria", categoria);
+            objData.append("guardarTipoServicio", tipoServicio);
+        }
 
         $.ajax({
             url: "../controlador/servicioControlador.php",
@@ -164,7 +173,10 @@ $(function () {
         }
     }
 
-    function editarServicio(servicioId, codigo, nombre, descripcion, idCategoria, idTipoServicio) {
+function editarServicio(servicioId, codigo, nombre, descripcion, idCategoria, idTipoServicio) {
+        servicioID = servicioId; // Almacenar el ID del servicio que se está editando
+
+        // Establecer los valores de los campos del formulario con los datos del servicio
         $("#ServicioID").val(servicioId);
         $("#Codigo").val(codigo);
         $("#Nombre").val(nombre);
@@ -172,13 +184,63 @@ $(function () {
         $("#sltCategoria").val(idCategoria);
         $("#sltTipoServicio").val(idTipoServicio);
 
+        // Cambiar el título del modal
+        $("#servicioModalLabel").text("Editar Servicio");
+
         // Abre el modal de edición
         $("#servicioModal").modal('show');
-
-        // Agregar manejador de evento para cerrar el modal de edición
-        $("#servicioModal").on("hidden.bs.modal", function () {
-            $("#ServicioID").val("0"); // Reinicia el valor del ID del servicio
-            $("#servicioForm")[0].reset(); // Limpia el formulario
-        });
     }
+
+    $("#guardarServicio").on("click", function () {
+        var codigo = $("#Codigo").val();
+        var nombre = $("#Nombre").val();
+        var descripcion = $("#Descripcion").val();
+        var categoria = $("#sltCategoria").val();
+        var tipoServicio = $("#sltTipoServicio").val();
+
+        var objData = new FormData();
+        objData.append("codigo", codigo);
+        objData.append("nombre", nombre);
+        objData.append("descripcion", descripcion);
+        objData.append("categoria", categoria);
+        objData.append("tipoServicio", tipoServicio);
+
+        if (servicioID !== 0) {
+            // En modo de edición, agrega el ID del servicio
+            objData.append("editarServicio", "ok");
+            objData.append("servicioID", servicioID);
+        } else {
+            // En modo de agregar, agrega el indicador para guardar un nuevo servicio
+            objData.append("guardarCodigo", codigo);
+            objData.append("guardarNombre", nombre);
+            objData.append("guardarDescripcion", descripcion);
+            objData.append("guardarCategoria", categoria);
+            objData.append("guardarTipoServicio", tipoServicio);
+        }
+
+        $.ajax({
+            url: "../controlador/servicioControlador.php",
+            type: "post",
+            dataType: "json",
+            data: objData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (respuesta) {
+                if (respuesta.success) {
+                    alert("Servicio actualizado o agregado con éxito");
+                    $("#servicioModal").modal('hide'); // Cierra el modal después de editar o agregar
+                    listarServicio(); // Actualiza la lista después de editar o agregar
+                } else {
+                    alert("Error al actualizar o agregar el servicio");
+                }
+                // Reiniciar el servicioID después de editar o agregar
+                servicioID = 0;
+            },
+            error: function (error) {
+                console.error("Error al editar o agregar el servicio: ", error);
+                servicioID = 0; // Asegúrate de restablecer servicioID en caso de error
+            }
+        });
+    });
 });

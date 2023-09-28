@@ -34,6 +34,11 @@ class servicio{
         $respuestaEliminar = mdlServicio::mdlEliminarServicio($idServicio);
         echo json_encode($respuestaEliminar);
     }
+
+    public function ctrEditarServicio($idServicio, $codigo, $nombre, $descripcion, $categoria, $tipoServicio) {
+        $respuestaEditar = mdlServicio::mdlEditarServicio($idServicio, $codigo, $nombre, $descripcion, $categoria, $tipoServicio);
+        echo json_encode($respuestaEditar);
+    }
 }
 
 
@@ -68,4 +73,17 @@ if (isset($_POST["eliminarServicio"], $_POST["idServicio"])) {
     $idServicio = $_POST["idServicio"];
     
     $objServicio->ctrEliminarServicio($idServicio);
+}
+
+
+if (isset($_POST["editarServicio"], $_POST["editarIdServicio"], $_POST["editarCodigo"], $_POST["editarNombre"], $_POST["editarDescripcion"], $_POST["editarCategoria"], $_POST["editarTipoServicio"])) {
+    $objServicio = new servicio();
+    $idServicio = $_POST["editarIdServicio"];
+    $codigo = $_POST["editarCodigo"];
+    $nombre = $_POST["editarNombre"];
+    $descripcion = $_POST["editarDescripcion"];
+    $categoria = $_POST["editarCategoria"];
+    $tipoServicio = $_POST["editarTipoServicio"];
+    
+    $objServicio->ctrEditarServicio($idServicio, $codigo, $nombre, $descripcion, $categoria, $tipoServicio);
 }

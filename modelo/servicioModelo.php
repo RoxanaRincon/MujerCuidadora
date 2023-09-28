@@ -6,7 +6,16 @@ class mdlServicio{
     public static function mdlListarServicios(){
         $listarServicio = "";
         try {
-            $objRespuesta = Conexion::conectar()->prepare("SELECT * from categoria,servicio,tiposervicio where servicio.IdCategoria = categoria.idCategoria and servicio.IdTipoServicio = tiposervicio.idTipoUsuario");
+            $objRespuesta = Conexion::conectar()->prepare("SELECT 
+                servicio.idServicio AS idServicio,
+                servicio.codigo AS codigo,
+                servicio.nombre AS nombre,
+                servicio.descripcion AS descripcion,
+                categoria.nombre AS nombreCategoria,
+                tiposervicio.nombre AS nombreTipoServicio
+            FROM servicio
+            INNER JOIN categoria ON servicio.IdCategoria = categoria.idCategoria
+            INNER JOIN tiposervicio ON servicio.IdTipoServicio = tiposervicio.idTipoUsuario");
             $objRespuesta->execute();
             $listarServicio = $objRespuesta->fetchAll(PDO::FETCH_ASSOC);
             $objRespuesta = null;
@@ -113,5 +122,43 @@ class mdlServicio{
             return ["success" => false, "mensaje" => "Error: " . $e->getMessage()];
         }
     }
+
+
+    public static function mdlEditarServicio($idServicio, $codigo, $nombre, $descripcion, $idCategoria, $idTipoServicio) {
+        $mensaje = "";
+        try {
+            // Preparar la sentencia SQL UPDATE
+            $stmt = Conexion::conectar()->prepare("UPDATE servicio 
+                                                   SET codigo = :codigo, nombre = :nombre, descripcion = :descripcion, 
+                                                       IdCategoria = :idCategoria, IdTipoServicio = :idTipoServicio 
+                                                   WHERE idServicio = :idServicio");
+
+            // Bind de los parámetros
+            $stmt->bindParam(':idServicio', $idServicio, PDO::PARAM_INT);
+            $stmt->bindParam(':codigo', $codigo, PDO::PARAM_INT);
+            $stmt->bindParam(':nombre', $nombre, PDO::PARAM_STR);
+            $stmt->bindParam(':descripcion', $descripcion, PDO::PARAM_STR);
+            $stmt->bindParam(':idCategoria', $idCategoria, PDO::PARAM_INT);
+            $stmt->bindParam(':idTipoServicio', $idTipoServicio, PDO::PARAM_INT);
+
+            // Ejecutar la sentencia SQL
+            if ($stmt->execute()) {
+                // Éxito: Devolver un mensaje de éxito
+                $mensaje = "ok";
+            } else {
+                // Error: Devolver un mensaje de error
+                $mensaje = "Error al editar el servicio";
+            }
+        } catch (Exception $e) {
+            // Manejar cualquier excepción que ocurra
+            $mensaje = "Error: " . $e->getMessage();
+        }
+        return $mensaje;
+    }
 }
+?>
+
+
+
+
 
