@@ -94,18 +94,18 @@ $(function(){
     }
 
     $("#guardarServicio").on("click", function(){
-        var codigo = $("#codigo").val();
-        var nombre = $("#nombre").val();
-        var descripcion = $("#descripcion").val();
-        var idCategoria = $("#sltCategoria").val();
-        var idTipoServicio = $("#sltTipoServicio").val();
+        var codigo = $("#Codigo").val();
+    var nombre = $("#Nombre").val();
+    var descripcion = $("#Descripcion").val();
+    var categoria = $("#sltCategoria").val();
+    var tipoServicio = $("#sltTipoServicio").val();
 
-        var objData = new FormData();
-        objData.append("guardarCodigo", codigo);
-        objData.append("guardarNombre", nombre);
-        objData.append("guardarDescripcion", descripcion);
-        objData.append("guardarIdCategoria", idCategoria);
-        objData.append("guardarIdTipoServicio", idTipoServicio);
+    var objData = new FormData();
+    objData.append("guardarCodigo", codigo);
+    objData.append("guardarNombre", nombre);
+    objData.append("guardarDescripcion", descripcion);
+    objData.append("guardarCategoria", categoria);
+    objData.append("guardarTipoServicio", tipoServicio);
 
         $.ajax({
             url: "../controlador/servicioControlador.php",
@@ -116,7 +116,7 @@ $(function(){
             contentType: false,
             processData: false
         }).done(function (respuesta) {
-            console.log(respuesta)
+            alert("registro cargado con exito")
         })
         
     })

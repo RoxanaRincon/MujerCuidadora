@@ -109,11 +109,11 @@ IMPORTANTE
 ponernos deacuerdo compañera para tarbajar en los archivos porque yo ya tenia el crud de servicio
 
 compañera hare el crud de manzana
-no tocar todos los archivos de manzana
 
-por favor deja tu lista de archivos que estaras utilizando para no presentar conflictos
-en el git
+se arregla  registrar servicios lucky
 
-1
-2
-3
+
+CIERRO DESARROLLO  NO + TERMINAR LO QUE FALTE  
+
+
+ TAREA D ELIMPIAR ARCHIVOS NO NECESARIOS.... NO OLVIDAR COONTROL DE CAMBIOS PAR APRESNETACION 
