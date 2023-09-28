@@ -43,18 +43,22 @@ $(function(){
         tabla = true;
     }
 
-    $("#guardarServicio").on("click", function(){
-        var codigo = $("#codigo").val()
-        var nombre = $("#nombre").val()
-        var responsable = $("#descripcion").val()
-        var objData = new FormData()
-        objData.append("guardarCodigo",codigo)
-        objData.append("guardarNombre",nombre)
-        objData.append("guardarResponsable",responsable)
-        objData.append("guardarDireccion",direccion)
-
+    $("#guardarServicio").on("click", function () {
+        var codigo = $("#Codigo").val();
+        var nombre = $("#Nombre").val();
+        var descripcion = $("#Descripcion").val();
+        var categoria = $("#sltCategoria").val();
+        var tipoServicio = $("#sltTipoServicio").val();
+    
+        var objData = new FormData();
+        objData.append("guardarCodigo", codigo);
+        objData.append("guardarNombre", nombre);
+        objData.append("guardarDescripcion", descripcion);
+        objData.append("guardarCategoria", categoria);
+        objData.append("guardarTipoServicio", tipoServicio);
+    
         $.ajax({
-            url: "../controlador/establecimientoControlador.php",
+            url: "../controlador/servicioControlador.php",
             type: "post",
             dataType: "json",
             data: objData,
@@ -62,9 +66,9 @@ $(function(){
             contentType: false,
             processData: false
         }).done(function (respuesta) {
-            console.log(respuesta)
-        })
-    })
+            alert("registrado con exito")
+        });
+    });
 
     function listarCategorias(){
         var objData = new FormData();
