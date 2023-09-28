@@ -105,10 +105,13 @@ $(function(){
             console.log(respuesta)
             opciones = '';
             respuesta.forEach(listarTipoServicio);
+
             function listarTipoServicio(item,index){
                 opciones += '<option value="' + item.idTipoUsuario + '">' + item.nombre + '</option>';
             }
 
+            $("#sltTipoServicio").html(opciones);
+            
         })
     }
 })
