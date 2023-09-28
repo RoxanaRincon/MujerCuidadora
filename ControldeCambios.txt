@@ -92,7 +92,7 @@
 
 *OJO FALTA!!!
 
-    1.Falta diseño y conectar formulario establecimiento.
+    1.Falta diseño y conectar tabla establecimiento a BD (EN PROCESO)
     2.Diseño externo del login SIN MODIFICAR EL LOGIN (ya que se encuentra en funcionmiento).
     3.Del archivo manzanas agregar detalles pequeños como: titulo, editar texto de avisos de las ubicaciones en el mapa.
     4.Registrar a la base de datos el formulario de mujercuidadora.
