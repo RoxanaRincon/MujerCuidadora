@@ -20,13 +20,8 @@ class servicio{
         echo json_encode($objRespuesta);
     }
 
-    public function ctrListarTipoServicio(){
-        $objRespuesta = mdlServicio::mdlListarTipoServicio();
-        echo json_encode($objRespuesta);
-    }
-
-    public function ctrInsertarServicio(){
-        $objRespuesta = mdlServicio::mdlListarServicio($this->codigo, $this->nombre, $this->descripcion, $this->idCategoria, $this->idTipo);
+    public function ctrListarTipoServicios(){
+        $objRespuesta = mdlServicio::mdlListarTipoServicios();
         echo json_encode($objRespuesta);
     }
 }
@@ -44,15 +39,6 @@ if(isset($_POST["listarCategorias"]) == "ok"){
 
 if(isset($_POST["listarTipoServicio"]) == "ok"){
     $objServicio = new servicio();
-    $objServicio->ctrListarTipoServicio();
+    $objServicio->ctrListarTipoServicios();
 }
 
-if(isset($_POST["guardarCodigo"],$_POST["guardarNombre"],$_POST["guardarDescripcion"],$_POST["guardarIdCategoria"],$_POST["guardarIdTipoServicio"])){
-    $objServicio = new pedido();
-    $objServicio -> codigo = $_POST["guardarCodigo"];
-    $objServicio -> nombre = $_POST["guardarNombre"];
-    $objServicio -> descripcion = $_POST["guardarDescripcion"];
-    $objServicio -> idCategoria = $_POST["guardarIdCategoria"];
-    $objServicio -> idTipoServicio = $_POST["guardarIdTipoServicio"];
-    $objServicio ->ctrInsertarServicio();
-}

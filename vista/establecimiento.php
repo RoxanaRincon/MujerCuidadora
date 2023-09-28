@@ -136,7 +136,7 @@
                     <label for="Direccion">Dirección:</label>
                     <input type="text" class="form-control" id="Direccion" name="Direccion">
                 </div>
-                <button type="submit" class="btn btn-success">Registrar Establecimiento</button>
+                <button id="guardarEstablecimiento" type="button" class="btn btn-success">Registrar Establecimiento</button>
             </form>
         </div>
         </div>

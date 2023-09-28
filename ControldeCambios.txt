@@ -1,103 +1,113 @@
-/////////////////////////////////////////////////   DIA 1  ////////////////////////////////////////////////////////////
+Ingresar mediante el siguiente link
 
-*ACCESOS
+https://www.figma.com/file/SdwcPc0lFeP1b3hzh44Xzo/Untitled?type=design&node-id=0%3A1&mode=design&t=nou84Jar1puGmJrA-1
 
-    1. Ingresar mediante el siguiente link para mockup
-       https://www.figma.com/file/SdwcPc0lFeP1b3hzh44Xzo/Untitled?type=design&node-id=0%3A1&mode=design&t=nou84Jar1puGmJrA-1
+trabajo dos primeras horas roxana 
 
-
-/////////////////////////////////////////////////   DIA 2  ////////////////////////////////////////////////////////////
-
-*TRABAJO DOS PRIMERAS HORAS ROXANA
-
-    -Implemenmtacion mapa  con manzanas  se utilizara  la vista manzanas.php (OK)
-    -Importante! Dejar las dos bases de datos no eliminar cambios o renombrar. (OK)
-
-*TRABAJO DOS PRIMERAS HORAS PAULA
-
-    -Arreglar formularios  de las demas vistas 
-    -Agregar los ajax   y las funcionalidades en los respectivos js creados en js
-    -Edicion de la vista de contacto 
-    -Links para redes del footer: (OK)
-        Facebook https://www.facebook.com/secredistmujer/
-        Insta    https://www.instagram.com/sdmujerbogota/
-        Youtube  https://www.youtube.com/@SDMujer
-        Tiktok   https://www.tiktok.com/@secredistmujer
-
-*TAREAS LISTAS
-
-    1.Eliminacion de todo los elementos del municipio (OK)
-    2.ELiminar del documento de municipios(Los datos se almacenaran desde la base de datos) (OK)
-    3.Se ajusta  diseño del login con el nuevo mapa (no mover  se procede hacer recuperacion de contraseña)
-      el login se  ajusta con video (OK)
-    4.Corregido el error de la base de datos para conexion de login (OK)
-    5.Login queda bien (OK)
-
-*IMPORTANTE!!! 
-
-    -SE DECIDE  UTILIZAR  Y TRABAJAR CON LA VERSION  DE BASE DE DATOS MUJER.SQL ??? (OK)
-    -Scriptsactualizacionmapa.sql se añade archivo para control de cambios en bd scripts ejecutables (OK)
-    -El cifrado de contraseña no funciona bien con la nueva base por esto se inactiva pero queda funcionando el 
-     login y el registro con la nueva base mujeres.sql /NECESITA PROBARSE (OK)
-
-*PENDIENTES
-
-    1.Se implementa mapa con algunos ejemplos, falta conectar con bd.
-    2.FUNCION RECUPERAR CONTRASEÑA.
-    3.Conexion de login no conecta con la base de datos, login sin funcionamiento(correjir el proceso). (OK)
+implemenmtacion mapa  con manzanas  se utilizara  la vista manzanas.php 
+Importante! Dejar las dos bases de datos no eliminar cambios o renombrar.
 
 
-*NOTA
+trabajo dos horas  maria paula 
 
-    -login no funciona correctamente ya que se realizo guardado de datos en la base de datos y al dijitar los datos 
-     a pesar ede que esten correctos me dicen datos erroneos. (OK)
-    -Cambio en la base de datos la altitud y la latitud deben estar en la manzana no en la manzana servicios. (OK)
-    -No me muestra el mapa en manzanas. (OK)
+arreglas formularios  de las demas vistas
+agregar los ajax   y las funcionalidades en los respectivos js creados en js
 
-*PROCESOS FALTANTES 
 
-    -Necesito el proceso del mapa para hacerlo dinamico.
 
-*NOTA
+TAREAS LISTAS
 
-    -LOGIN FUNCIONANDO CORRECTAMENTE CON RECUPERACION CON PREGUNTAS  INCLUYE PREGUNTAS AL REGISTARR Y FUNCIONAMIENTO 
-     TOTAL HACER PRUEBAS. (OK)
+1. Eliminacion de todo los elementos del municipio
+2. ELiminar del documento de municipios(Los datos se almacenaran desde la base de datos)
+3. se ajusta  diseño del login con el nuevo mapa (no mover  se procede hacer recuperacion de contraseña) el login se  ajusta con video 
+4. Corregido el error de la base de datos para conexion de login
 
-*CORRECCIONES
 
-    -Diseño login alargado
-    -Aun sin registrar datos (OK)
-    -Verificacion dos pasos no guarda (OK)
 
-*IMPORTANTE!
 
-    -Enviar script de la base de la base de datos para ajustar el mapa que no se visualiza y ternerlo listo antes 
-     de las 8 para tener completa esa vista. (OK)
-    -BORRAR BD Y VOLVER ALA A CREAR CON EL SCRIPT DE MUJER.SQL  PARA EVITAR errores/PROBAR DE NUEVO (OK)
-    -NO TOCAR EL MAPA VOY AJUSTARLO 
-    -compañera necesito ajustar el diseño del login / DEJARLO FINAL ASI SIN DAÑAR FUNCIONAMIENTO (OK)
 
-*PASOS A SEGUIR 
 
-    1. BORRAR BASE DE DATOS (OK)
-    2. CREAR NUEVA BASE DE DATOS mujeres (OK)
-    3. Correr el script  que esta en el documento mujeres.sql (OK)
-    4. Probar funcionalidades de login (OK)
-    5. Probar mapa (OK)
-    6. No tocar nada termino desarrollo final
 
-*TAREAS EN PROCESO
-    -INICILAMENTE SE BASARA LA RECUPERACION DE CONTRASEÑA EN PREGUNTAS DE SEGURIDAD PARA NO TENER 
-     QUE UTILIZAR CORREOS YA QUE NO TENEMOS UN SERVIDOR DE CORREOS PARA ENVIAR TOKENS DE RECUPERACION (OK) 
+TAREAS EN PROCESO
 
-*OJO FALTA!!!
+Primeras horas paula
+1. Edicion de la vista de contacto
+2. links para redes del footer 
+    - facebook https://www.facebook.com/secredistmujer/
+    - Insta    https://www.instagram.com/sdmujerbogota/
+    - youtube  https://www.youtube.com/@SDMujer
+    - tiktok   https://www.tiktok.com/@secredistmujer
 
-    1.Falta diseño y conectar tabla establecimiento a BD (EN PROCESO)
-    2.Diseño externo del login SIN MODIFICAR EL LOGIN (ya que se encuentra en funcionmiento).
-    3.Del archivo manzanas agregar detalles pequeños como: titulo, editar texto de avisos de las ubicaciones en el mapa.
-    4.Registrar a la base de datos el formulario de mujercuidadora.
-    5.Registro formulario municipios.
-    6.Registro formulario propuesta.
-    7.Por ahora servicios quemados en base de datos, dejar dinamica la base de datos.
-    8.Falta login usuario.
-    9.Renombrar carpetas y ordenarlas (No olvidar los llamados a las carpetas, tambien cambia OJO!!)
+
+IMPORTANTE 
+
+SE DECIDE  UTILIZAR  Y TRABAJAR CON LA VERSION  DE BASE DE DATOS MUJER.SQL ???
+
+scriptsactualizacionmapa.sql se añade archivo apra ocntrol de cmabios en bd scripts ejecutables 
+
+el cifrado de contraseña no  funciona bien con la nueva base   por esto se inactiva pero queda funcionando el login y el registro con la nueva base mujeres.sql /NECESITA PROBARSE
+
+PENDIENTES
+
+1. se implemnta mapa  con algunos ejemplos , falta conectar con bd
+
+
+FUNCION  RECUPERAR CONTRASEÑA 
+
+INICILAMNTE SE BASARA  LA RECUPERACION DE CONTRASEÑA EN  PREGUNTAS  DE SEGURIDAD  PAR ANO TENER QUE UTILIZAR CORREOS YA QUE NO TENEMOS UN SERVIDOR DE CORREOS  PARA ENVIAR TOKENS DE RECUPERACION 
+
+
+
+Procesos que hacen falta
+Conexion de login no conecta con la base de datos, login sin funcionamiento(correjir el proceso)
+
+
+
+login no funciona correctamente ya que se realizo guardado de datos en la base de datos y al dijitar los datos a pesar ede que esten correctos me dicen datos erroneos
+
+
+proccesos faltantes 
+
+necesito el proceso del mapa para hacerlo dinamico
+
+
+cambio en la base de datos la altitud y la latitud deben estar en la manzana no en la manzana servicios
+
+No me muestra el mapa en manzanas
+
+
+LOGIN  FUNCIONANDO CORRECTAMENTE CON  RECUPERACION CON PREGUNTAS  INCLUYE PREGUNTAS AL REGISTARR Y FUNCIONAMIENTO TOTAL 
+HACER PRUEBAS
+
+correciones
+diseño login alargado
+aun sin registrar datos 
+verificacion dos pasos no guarda
+
+IMPORTANTE!
+enviar script de la base de la base de datos para ajustar el mapa que no se visualiza 
+y ternerlo listo antes de las 8 para tener completa esa vista
+
+
+BORRAR BD Y VOLVER ALA A CREAR CON EL SCRIPT DE MUJER.SQL  PARA EVITAR errores
+
+PROBAR DE NUEVO 
+
+
+NO TOCAR EL MAPA VOY AJUSTARLO 
+
+IMPORTANTE
+compañera necesito ajustar el diseño del login 
+
+
+LOGIN DEJARLO FINAL ASI 
+
+PASOS A SEGUIR 
+
+1 BORRAR BASE DE DATOS 
+2 CREAR NUEVA BASE DE DATOS mujeres
+3 correr el script  que esta en el documento mujeres.sql 
+4 probar funcionalidades de login 
+5 probar mapa 
+6 no tocar nada  termino desarrollo final no mas tiempo trabajo f
+

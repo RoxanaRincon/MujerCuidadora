@@ -136,26 +136,25 @@
                         <input type="hidden" id="ServicioID" name="ServicioID" value="0">
                         <div class="form-group">
                             <label for="Codigo">Código:</label>
-                            <input type="text" class="form-control" id="codigo" name="codigo" required>
+                            <input  style="background-color: transparent; border-color:black;" type="text" class="form-control" id="Codigo" name="Codigo" required>
                         </div>
                         <div class="form-group">
                             <label for="Nombre">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            <input style="background-color: transparent; border-color:black;" type="text" class="form-control" id="Nombre" name="Nombre" required>
                         </div>
                         <div class="form-group">
                             <label for="Descripcion">Descripción:</label>
-                            <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
+                            <textarea style="background-color: transparent; border-color:black;" class="form-control" id="Descripcion" name="Descripcion"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="Descripcion">Categoria:</label>
-                            <select class="form-select" name="sltCategoria" id="sltCategoria">
-
+                            <select style="background-color: transparent; border-color:black;" class="form-select" name="sltCategoria" id="sltCategoria">
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="Descripcion">Tipo Servicio:</label>
-                            <select class="form-select" name="sltTipoServicio" id="sltTipoServicio">
-
+                            <select style="background-color: transparent; border-color:black;" class="form-select" name="sltTipoServicio" id="sltTipoServicio">>
+                                
                             </select>
                         </div>
                     </form>

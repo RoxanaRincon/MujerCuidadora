@@ -38,4 +38,28 @@ $(function(){
         })
         tabla = true;
     }
+
+    $("#guardarEstablecimiento").on("click", function(){
+        var codigo = $("#Codigo").val()
+        var nombre = $("#Nombre").val()
+        var responsable = $("#Responsable").val()
+        var direccion = $("#Direccion").val()
+        var objData = new FormData()
+        objData.append("guardarCodigo",codigo)
+        objData.append("guardarNombre",nombre)
+        objData.append("guardarResponsable",responsable)
+        objData.append("guardarDireccion",direccion)
+
+        $.ajax({
+            url: "../controlador/establecimientoControlador.php",
+            type: "post",
+            dataType: "json",
+            data: objData,
+            cache: false,
+            contentType: false,
+            processData: false
+        }).done(function (respuesta) {
+            console.log(respuesta)
+        })
+    })
 })
