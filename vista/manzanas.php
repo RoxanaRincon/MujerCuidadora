@@ -36,7 +36,7 @@
     
 </head>
 <body id="body-pd">
-    <header class="header" id="header">
+    <header style="position:relative; height:60px" class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
     
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -73,7 +73,7 @@
                         
                     </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../vista/contacto.php">Contacto</a>
+                            <a class="nav-link" href="../vista/login.php">Salir</a>
                         </li>
                     </ul>
                 </div>
@@ -105,8 +105,14 @@
                 <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
         </nav>
     </div>
+    <br>
+    <center>
+        <h1 style="font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">ESTAS SON NUESTRAS MANZANAS</h1>
+    </center>
+
     <!-- Contenido principal -->
     <div class="main-content-fluid">
+
 
 
 <div id="map"></div>
@@ -115,6 +121,7 @@
 
     
 
+<br><br>
 <div class="row">
             <div class="col-md-4">
                 <h3>Mapa Manzana Antonio Nariño</h3>
@@ -144,14 +151,78 @@
       
     
     </div>
-    <!-- Pie de página -->
-    <footer class="footer text-center">
-        <div class="container">
-        <img src="https://manzanasdelcuidado.gov.co/wp-content/uploads/2023/07/cuidamos-a-las-que-nos-cuidan.svg" alt="Texto alternativo de la imagen">
-            © 2023 SENA
-        </div>
-    </footer>
-   
+
+    <div>
+        <footer class="new_footer_area bg_color">
+            <div class="new_footer_top">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                                <h3 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; letter-spacing: 0.05em;" class="f-title f_600 t_color f_size_18">Para las mujeres
+                                    y personas
+                                    cuidadoras</h3>
+                                <ul class="list-unstyled f_list">
+                                    <li><a href="#">Educacion flexible para terminar primaria y bachillerato</a></li>
+                                    <li><a href="#">Taller educacion socio-ocupacional</a></li>
+                                    <li><a href="#">Cursos en alianza con el SENA</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                                <h3 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; letter-spacing: 0.05em;" class="f-title f_600 t_color f_size_18">Para quienes
+                                    requieren cuidado
+                                    o apoyo</h3>
+                                <ul class="list-unstyled f_list">
+                                    <li><a href="#">Refuerzo</a></li>
+                                    <li><a href="#">El arte de cuidarte</a></li>
+                                    <li><a href="#">Dupla de recreacion</a></li>
+                                    <li><a href="#">Taleres y muestras de danza</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                                <h3 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; letter-spacing: 0.05em;" class="f-title f_600 t_color f_size_18">Para las familias
+                                    y la ciudadanía
+                                    en general</h3>
+                                <ul class="list-unstyled f_list">
+                                    <li><a href="#">Taller ¡A cuidar se aprende!</a></li>
+                                    <li><a href="#">Taller ¡Cuidemos a los que nos cuidan!</a></li>
+                                    <li><a href="#">Sala de lectura</a></li>
+                            </div>
+                        </div>                        
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                                <h3 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; letter-spacing: 0.05em;" class="f-title f_600 t_color f_size_18">Conocenos En!</h3>
+                                <div class="f_social_icon">
+                                    <a href="https://www.facebook.com/secredistmujer/" class="fab fa-facebook"><img src="./imagenes/facebook.png" alt=""></a>
+                                    <a href="https://www.instagram.com/sdmujerbogota/" class="fab fa-twitter"><img src="./imagenes/instagram.png" alt=""></a>
+                                    <a href="https://www.youtube.com/@SDMujer" class="fab fa-linkedin"><img src="./imagenes/youtube.png" alt=""></a>
+                                    <a href="https://www.tiktok.com/@secredistmujer" class="fab fa-pinterest"><img src="./imagenes/tik-tok.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bg">
+                    <div class="footer_bg_one"></div>
+                    <div class="footer_bg_two"></div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-7">
+                            <p class="mb-0 f_400">© 2023 Manzanas del cuidado  -Todos los derechos reservados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <script src="js/mapa.js"></script>
 </body>

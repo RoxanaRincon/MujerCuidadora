@@ -29,7 +29,11 @@ $(document).ready(function() {
                     console.log(response.idAdmin);
                     window.location.href = "../vista/manzanas.php";
                 } else {
-                    alert("Usuario o contraseña incorrectos");
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Usuario y contraseña incorrectos!',
+                    })
                 }
             },
             error: function(xhr, status, error) {

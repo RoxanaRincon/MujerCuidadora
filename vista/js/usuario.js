@@ -48,8 +48,8 @@ $(document).ready(function() {
             $("#respuestaSeguridad2").val("");
             alert("Usuario creado satisfactoriamente ");
 
-            $("#boxIngreso").show();
-            $("#boxRegistro").hide();
+            $("#boxIngresoMol").show();
+            $("#boxRegistroMol").hide();
         }).fail(function (xhr, status, error) {
             
             console.log(xhr, status, error);

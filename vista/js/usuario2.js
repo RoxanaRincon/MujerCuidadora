@@ -1,8 +1,8 @@
 $(document).ready(function() {
     // Manejo del evento click para el botón "REGISTRAR"
     $("#registro").on("click", function() {
-        $("#boxIngreso").hide();
-        $("#boxRegistro").fadeIn(1000);
+        $("#ingresoMol").hide();
+        $("#registroMol").fadeIn(1000);
         $("#correoregistroid").val("");
         $("#contrasenaregistroid").val(""); // Limpiar el campo de contraseña
     });
@@ -46,10 +46,16 @@ $(document).ready(function() {
             $("#preguntaSeguridad2").val("");
             $("#respuestaSeguridad1").val("");
             $("#respuestaSeguridad2").val("");
-            alert("Usuario creado satisfactoriamente ");
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+            })
 
-            $("#boxIngreso").show();
-            $("#boxRegistro").hide();
+            $("# registroMol").hide();
+            $("#ingresoMol").fadeIn(1000);
         }).fail(function (xhr, status, error) {
             
             console.log(xhr, status, error);

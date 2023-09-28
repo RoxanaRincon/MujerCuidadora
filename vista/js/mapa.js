@@ -1,5 +1,6 @@
-var map = L.map('map').setView([4.642832837652756, -74.11994579368523], 12);
 
+$(function(){
+    var map = L.map('map').setView([4.642832837652756, -74.11994579368523], 12);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -17,17 +18,17 @@ var greenIcon = L.icon({
 });
 
 
-var marker = L.marker([4.590322969137869, -74.09791318650694], {icon: greenIcon}).addTo(map).bindPopup("<b>hola soy una manzana 1!</b><br>I am a popup.");
+var marker = L.marker([4.590322969137869, -74.09791318650694], {icon: greenIcon}).addTo(map).bindPopup("<b>Entidad Ancla </b><br>Codigo:234567<br>Localidad:Santa Fe<br>");
 
-var marker = L.marker([4.629531954416187, -74.07322412883565], {icon: greenIcon}).addTo(map).bindPopup("<b>hola soy una manzana 2!</b><br>I am a popup.");
+var marker = L.marker([4.629531954416187, -74.07322412883565], {icon: greenIcon}).addTo(map).bindPopup("<b>Casa de la participacion </b><br>Codigo:56432<br>Localidad:Chapinero<br>");
 
-var marker = L.marker([4.617838199078608, -74.1239310495157], {icon: greenIcon}).addTo(map).bindPopup("<b>hola soy una manzana 2!</b><br>I am a popup.");
+var marker = L.marker([4.617838199078608, -74.1239310495157], {icon: greenIcon}).addTo(map).bindPopup("<b>CDC Jose Antonio Galan</b><br>Codigo:234567<br>Localidad: San Cristobal<br>");
 
-var marker = L.marker([4.755291784099477, -74.11342462883565], {icon: greenIcon}).addTo(map).bindPopup("<b>hola soy una manzana 2!</b><br>I am a popup.");
+var marker = L.marker([4.755291784099477, -74.11342462883565], {icon: greenIcon}).addTo(map).bindPopup("<b>CEFE Fontanar del Rio </b><br>Codigo:234567<br>Localidad:Usme<br>");
 
-var marker = L.marker([4.6837717924878834, -74.14169944845952], {icon: greenIcon}).addTo(map).bindPopup("<b>hola soy una manzana 2!</b><br>I am a popup.");
+var marker = L.marker([4.6837717924878834, -74.14169944845952], {icon: greenIcon}).addTo(map).bindPopup("<b>Campo Verde </b><br>Codigo:234567<br>Localidad:Bosa<br>");
 
-var marker = L.marker([4.635154887984382, -74.05814752408034], {icon: greenIcon}).addTo(map).bindPopup("<b>hola soy una manzana 2!</b><br>I am a popup.");
+var marker = L.marker([4.635154887984382, -74.05814752408034], {icon: greenIcon}).addTo(map).bindPopup("<b>CDC Bellavista </b><br>Codigo:234567<br>Localidad:Kennedy<br>");
 
 
 function onMapClick(e) {
@@ -38,3 +39,21 @@ function onMapClick(e) {
 }
 
 map.on('click', onMapClick);
+    listarMapa();
+
+    function listarMapa(){
+        var objData = new FormData();
+        objData.append("listarManzanas", "ok");
+        $.ajax({
+            url: "../controlador/mapaControlador.php",
+            type: "post",
+            dataType: "json",
+            data: objData,
+            cache: false,
+            contentType: false,
+            processData: false
+        }).done(function (respuesta) {
+            console.log(respuesta);
+        })
+    }
+})

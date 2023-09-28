@@ -250,30 +250,37 @@ body {
 .boxRegistro{
     position: relative;
     background: #1c1c1c;
-    width: 400px;
-    height: 470px;
+    width: 500px;
+    height: 500px;
     border-radius: 8px;
+    margin-left: 60px;
     overflow: hidden;
 }
 
 .boxRegistro form .inputBox{
     position: relative;
-    width: 300px;
-    margin-top: 30px;
+    width: 400px;
+    margin-top: 15px;
 }
 
 .boxRegistro form .buttons input[type="button"]{
     position: relative;
     padding: 8px 15px;
-    /* border-color: #45f3ff; */
+    background: #A3FAC0;
     border: none;
     border-radius: 8px;
     font-size: 1em;
 }
 
-.boxRegistro form .buttons input[type="button"]:hover{
-    background: #45f3ff;
+.boxRegistro form .buttons input[type="submit"]{
+    position: relative;
+    padding: 8px 15px;
+    background: #B597FA;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
 }
+
 
 .boxRegistro form .buttons{
     display: flex;

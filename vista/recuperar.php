@@ -40,25 +40,19 @@
 </div>
 <div id="login-container">
     <!-- Aquí colocamos el formulario de inicio de sesión y registro -->
-    <div id="boxIngreso" class="box">
+    <div style="height:500px" id="boxIngreso" class="box">
         <span class="liner"></span>
         <form id="formLogin">
-            <h1>RECUPERAR CONTRASEÑA</h1>
+            <h1 style="margin-end:30px">RECUPERAR CONTRASEÑA</h1>
 
             <div class="inputBox">
                 <span>Usuario:</span>
                 <input id="correoidfrm" name="correoFrm" type="email" required="required">
             </div>
             <div class="buttons">
-                <button id="correo" type="submit" disabled class="btn btn-primary">
-                    <span class="bi bi-envelope"></span> ENVIAR CORREO
-                </button>
-                <button id="preguntas-btn" type="button" class="btn btn-secondary">
+                <button style="background: #B597FA"id="preguntas-btn" type="button" class="btn">
                     <span class="bi bi-question"></span> PREGUNTAS DE SEGURIDAD
                 </button>
-            </div>
-            <div class="alert alert-danger" role="alert">
-                <strong>Atención:</strong> Sistema de correos temporalmente inactivo, por favor utilice la opción "preguntas de seguridad".
             </div>
 
             <a href="../vista/login.php">¿Volver al inicio?</a>
