@@ -29,38 +29,45 @@
 
 
 </head>
-<body>
-<div id="video-container">
-    <!-- Aquí colocamos el video -->
-    <video autoplay loop muted playsinline>
-        <source src="../vista/imagenes/videologin.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
-    </video>
-</div>
+<body style="background: #DAD8DE;">
 
 <div id="login-container">
         <!-- Aquí colocamos el formulario de inicio de sesión y registro -->
-    <div id="boxIngreso" class="box" >
-        <span class="liner"></span>
-        <form id="formLogin">
-        <h1>MUJERES CUIDADORAS </h1>
-            <h2>INICIAR SESION</h2>
-            <div class="inputBox">
-                <span>Usuario:</span>
-                <input id="correoidfrm"  name="correoFrm"  type="email" required="required">
-            </div>
-            <div class="inputBox">
-                <span>Contraseña:</span>
-                <input id="contrasenaidfrm" name="contrasenaFrm"  type="password" required="required">
-            </div>
-            <div class="buttons">
-                <input id="ingresar" type="submit" value="INGRESAR">
-                <input id="registro" type="button" value="REGISTRAR">
-                
-            </div>
-            <a  href="../vista/recuperar.php" >¿Olvidaste tu contraseña?</a>
-        </form>
-    </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="boxIngreso" class="box" >
+                    <span class="liner"></span>
+                    <form id="formLogin">
+                        <h2>INICIAR SESION</h2>
+                        <center>
+                            <img style="width:100px" src="./imagenes/logoMAnzana.png" alt="">
+                        </center>
+                        
+                        <div class="inputBox">
+                            <span>Usuario:</span>
+                            <input id="correoidfrm"  name="correoFrm"  type="email" required="required">
+                        </div>
+                        <div class="inputBox">
+                            <span>Contraseña:</span>
+                            <input id="contrasenaidfrm" name="contrasenaFrm"  type="password" required="required">
+                        </div>
+                        <div class="buttons">
+                            <input id="ingresar" type="submit" value="INGRESAR">
+                            <input id="registro" type="button" value="REGISTRAR">
+                            
+                        </div>
+                        <a  href="../vista/recuperar.php" >¿Olvidaste tu contraseña?</a>
+                    </form>
+
+            
+                </div>
+           </div>
+           <div class="col-md-6">
+            <img style="margin-left:170px; margin-top:40px" src="./imagenes/imagenLogin.jpg" alt="">
+           </div>
+     </div>
+    
+    
 
     <div id="boxRegistro" class="boxRegistro" style="display: none;">
     <span class="liner"></span>
@@ -115,9 +122,7 @@
 
    
  </div>
-
-
-
+ 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
     <script src="js/login.js"></script>
