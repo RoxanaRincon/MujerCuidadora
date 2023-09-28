@@ -21,7 +21,7 @@ class servicio{
     }
 
     public function ctrListarTipoServicios(){
-        $objRespuesta = mdlServicio::mdlListarTipoServicios();
+        $objRespuesta = mdlServicio::mdlListarTipoServicio();
         echo json_encode($objRespuesta);
     }
 

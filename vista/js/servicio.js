@@ -39,32 +39,7 @@ $(function(){
         })
         tabla = true;
     }
-
-
-    // function listarSelectCategorias(){
-    $("#guardarServicio").on("click", function(){
-        var codigo = $("#codigo").val()
-        var nombre = $("#nombre").val()
-        var responsable = $("#descripcion").val()
-        var objData = new FormData()
-        objData.append("guardarCodigo",codigo)
-        objData.append("guardarNombre",nombre)
-        objData.append("guardarResponsable",responsable)
-        objData.append("guardarDireccion",direccion)
-
-        $.ajax({
-            url: "../controlador/establecimientoControlador.php",
-            type: "post",
-            dataType: "json",
-            data: objData,
-            cache: false,
-            contentType: false,
-            processData: false
-        }).done(function (respuesta) {
-            console.log(respuesta)
-        })
-    })
-
+    
     function listarCategorias(){
         var objData = new FormData();
         objData.append("listarCategorias", "ok");
@@ -111,7 +86,7 @@ $(function(){
             opciones = '';
             respuesta.forEach(listarSelectTipoServicio);
             function listarSelectTipoServicio(item,index){
-                opciones += '<option value="' + item.idTipoUsuario + '">' + item.tipoServicio + '</option>';
+                opciones += '<option value="' + item.idTipoUsuario + '">' + item.nombre + '</option>';
 
             }
             $("#sltTipoServicio").html(opciones);
