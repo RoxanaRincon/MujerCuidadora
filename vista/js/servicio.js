@@ -25,7 +25,7 @@ $(function(){
             function listarServicios(item,index){
                 botonAcciones = '<button id="btn_editServicio" type="button" class="btn btn-danger" idServicio="'+item.idServicio+'" codigo = "'+item.codigo+'" nombre = "'+item.nombre+'" descripcion = "'+item.descripcion+'" idCategoria = "'+item.idCategoria+'" idTipoServicio = "'+item.idTipoServicio+'"><i  class="bi bi-trash3"></i></button>';
                 botonAcciones += '<button id="btn_eliServicio" type="button" class="btn btn-primary" idServicio="'+item.idServicio+'"><i class="bi bi-pencil-square"></i></button>';
-                dataSet.push([item.codigo, item.nombre, item.descripcion, item.categoria, item.tipoServicio, botonAcciones]);
+                dataSet.push([item.codigo, item.nombre, item.descripcion, item.idCategoria, item.IdTipoServicio, botonAcciones]);
                 
             }
             actualizarTabla(dataSet);
@@ -103,9 +103,7 @@ $(function(){
             processData: false
         }).done(function (respuesta) {
             console.log(respuesta)
-
             opciones = '';
-
             respuesta.forEach(listarTipoServicio);
             function listarTipoServicio(item,index){
                 opciones += '<option value="' + item.idTipoUsuario + '">' + item.nombre + '</option>';
