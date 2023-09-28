@@ -81,9 +81,9 @@ $(function(){
             // console.log(respuesta)
             opciones = '';
             respuesta.forEach(listarCategoriasOpciones);
-
+             // se ajusta nombre
             function listarCategoriasOpciones(item,index){
-                opciones += '<option value="' + item.idCategoria + '">' + item.categoria + '</option>';
+                opciones += '<option value="' + item.idCategoria + '">' + item.nombre + '</option>';
             }
 
             $("#sltCategoria").html(opciones);
