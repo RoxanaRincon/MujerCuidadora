@@ -32,7 +32,7 @@ class mdlServicio{
     public static function mdlListarTipoServicios(){
         $listarTipoServicio = "";
         try {
-            $objRespuesta = Conexion::conectar()->prepare("SELECT * FROM tipoServicio");
+            $objRespuesta = Conexion::conectar()->prepare("SELECT * FROM tiposervicio");
             $objRespuesta->execute();
             $listarTipoServicio = $objRespuesta->fetchAll(PDO::FETCH_ASSOC);
             $objRespuesta = null;

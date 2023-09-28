@@ -108,7 +108,7 @@ $(function(){
 
             respuesta.forEach(listarTipoServicio);
             function listarTipoServicio(item,index){
-                opciones += '<option value="' + item.idTipoServicio + '">' + item.tipoServicio + '</option>';
+                opciones += '<option value="' + item.idTipoUsuario + '">' + item.nombre + '</option>';
             }
 
         })
